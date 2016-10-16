@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 1</title>
+        <style>
+          @font-face {
+              font-family: "Chalet";
+              src: url(fonts/Chalet.ttf) format("truetype");
+          }
+          body{
+            font-family: Chalet;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            background-image: url("./img/fondo.jpg");
+
+          }
+          .fondoAzulClaro{
+                background-color: rgb(30, 99, 129);
+            -webkit-border-radius: 5px 10px;  /* Safari  */
+            -moz-border-radius: 5px 10px;
+                 /* Firefox */
+          }
+          .fondoAzulOscuro{
+                background-color: rgb(23, 73, 105);
+            -webkit-border-radius: 20px 20px;  /* Safari  */
+            -moz-border-radius: 20px 20px;
+              /* Firefox */
+          }
+          .contenedor {
+              position: relative;
+              height: 82%;
+              width: 100%;
+          }
+          header{
+            min-height: 5%;
+            min-width: 100%;
+            margin: 0.5%;
+          }
+          nav{
+            min-height: 5%;
+            min-width: 100%;
+            margin: 0.5%;
+          }
+          section{
+            float: left;
+            width: 70%;
+            height: 100%;
+            margin: 0.5%;
+          }
+          article {
+              width: 97%;
+              height: 80%;
+              margin: 1.2%;
+          }
+          aside{
+
+            float: right;
+            width: 28%;
+            height: 100%;
+              margin: 0.5%;
+          }
+          footer{
+            min-height: 5%;
+            min-width: 100%;
+              margin: 1%;
+          }
+
+        </style>
+    </head>
+    <body>
+      <header class="fondoAzulOscuro">
+        < Header >
+      </header>
+      <nav class="fondoAzulOscuro">
+          < nav >
+      </nav>
+      <div class="contenedor">
+        <section class="fondoAzulOscuro">
+            < section >
+            <article class="fondoAzulClaro">
+                < article >
+            </article>
+        </section>
+        <aside class="fondoAzulOscuro">
+          < aside >
+        </aside>
+    </div>
+      <footer class="fondoAzulOscuro">
+        < footer >
+      </footer>
+    </body>
+</html>

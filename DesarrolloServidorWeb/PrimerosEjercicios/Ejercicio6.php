@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Circulo</title>
+        <?php
+        $PI = 3.141597;
+        ?>
+
+    </head>
+    <body>
+        <?php
+        echo("");
+        ?>
+    </body>
+</html>

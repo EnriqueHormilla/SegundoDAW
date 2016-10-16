@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Ejemplo formulario</title>
+        <style>
+
+.btn{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 27%;
+}
+.center{
+  text-align: center;
+
+}
+.azul{
+  background-color: #97d1f5;
+}
+.morado{
+  background-color: #aaaaf6;
+}
+
+.grisClaro{
+  background-color: #e6e6e6;
+}
+.gris{
+  background-color: #a5a5a5;
+}
+.floarIzquierda{
+  text-align: right;
+}
+.input-medio{
+  width: 40%;
+}
+input{
+  margin: 1%;
+}
+
+
+table{
+  margin: auto;
+}
+
+
+        </style>
+    </head>
+    <body>
+		<form method ="get">
+      <table  >
+         <tr>
+           <td colspan="2" class="center azul" >FORMULARIO DE REGISTRO</td>
+         </tr>
+         <tr>
+           <td colspan="2"  class="center morado">NOMBRE Y APELLIDOS</td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Nombre y apellidos:</td>
+           <td class="grisClaro" >	<input  size="50" type="text" autofocus required id="nombre" placeholder="Introduce nombre y apellidos" >  </td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Nombre de usuario:</td>
+           <td class="grisClaro">	<input class="input-medio" type="text"  required id="nikc" placeholder="Nombre de usuario" ></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Password:</td>
+           <td class="grisClaro">	<input class="input-medio" type="password"  required id="pass" placeholder="Introduce Password" ></td>
+         </tr>
+         <tr>
+           <td  colspan="2"  class="center morado">Direccion</td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda" >Tipo de via:</td>
+           <td class="grisClaro">
+            <input  type="radio" name="via" value="calle" > Calle
+     			  <input  type="radio" name="via" value="avenida"> Avenida
+     			  <input  type="radio" name="via" value="paseo"> Paseo
+          </td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Nombre de la via :</td>
+           <td class="grisClaro">	<input class="input-medio" type="text"  required id="nombrevia"  ></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Numero :</td>
+           <td class="grisClaro">	<input class="input-medio" type="number" min='0' max='100'  id="nombrevia"  ></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Codigo Postal :</td>
+           <td class="grisClaro">	<input class="input-medio" type="number" required id="cp"  ></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Municipio :</td>
+           <td class="grisClaro">	<input class="input-medio" type="text" required id="municipio"  ></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Provincia :</td>
+           <td class="grisClaro">
+             <select>
+               <option value="Murcia">Murcia</option>
+               <option value="Madrid">Madrid</option>
+               <option value="Asturias">Asturias</option>
+               <option value="LaRioja" selected>LaRioja</option>
+             </select>
+           </td>
+         </tr>
+         <tr>
+           <td  colspan="2"  class="center morado">Datos Personales</td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">DNI :</td>
+           <td class="grisClaro">	<input class="input-medio" type="text" id="dni" size="10" required pattern="[0-9] {8} [A-Z]" maxlength="9" /></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Fecha Nacimento :</td>
+           <td class="grisClaro"><input class="input-medio" type="date" id="date" required placeholder="Dia/mes/año" /></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Email :</td>
+           <td class="grisClaro">	<input class="input-medio" type="email" id="correo" required/></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Espacio web :</td>
+           <td class="grisClaro">	<input class="input-medio" type="url" name="web"></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Telefono:</td>
+           <td class="grisClaro">	<input class="input-medio" type="number" id="Telefono"  ></td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Foto :</td>
+           <td class="grisClaro">	<input  type="file" id="foto"  ></td>
+         </tr>
+         <tr>
+           <td colspan="2" class="center morado" >Intereses</td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Selleciones sus preferencias :</td>
+           <td class="grisClaro">
+            <input  type="checkbox" name="preferencias" value="AM">Deportes
+     				<input  type="checkbox" name="preferencias" value="A1" > Musica
+     				<input  type="checkbox" name="preferencias" value="A2" > Cine
+     				<input  type="checkbox" name="preferencias" value="B1" > Informatica
+           </td>
+         </tr>
+         <tr>
+           <td class="gris floarIzquierda">Selleciones sus preferencias :</td>
+           <td class="grisClaro">
+             <input  type="color" name="color" value="color">color
+
+           </td>
+         </tr>
+         <tr class="morado">
+           <td  colspan="2">	<input class="input-medio btn"  type="submit" id="btnEnviar" value="Enviar por get sin validar" /></td>
+         </tr>
+     </table>
+		</form>
+    </body>
+</html>

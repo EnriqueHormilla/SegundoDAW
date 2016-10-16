@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Ejemplo formulario</title>
+        <style>
+			label {
+  display: block;
+  margin: .5em 0 0 0;
+}
+.btn {
+  display: block;
+  margin: 1em 0;
+}
+input:focus {
+  border: 2px solid #000;
+  background: #F3F3F3;
+}
+form fieldset {
+  margin-left:20%;
+  width: 60%;
+}
+.btn{
+    margin: auto;
+}
+
+ 
+        </style>
+    </head>
+    <body>
+		<form>
+		<fieldset>
+		  <legend>Datos Personales</legend>
+		 
+			<label for="nombre">Nombre</label>
+			<input type="text" autofocus required id="nombre" placeholder="Es obligatorio" >
+			 
+			<label for="apellidos">Apellidos</label>
+			<input type="text" id="apellidos" size="50" />
+			 
+			<label for="dni">DNI</label>
+			<input type="text" id="dni" size="10" pattern="[0-9] {8} [A-Z]" maxlength="9" />			 
+
+			<label for="date">Año de nacimiento</label>
+			<input type="date" id="date" />
+			
+			<label for="date">Género</label>
+			  <input type="radio" name="genero" value="hombre" checked> Hombre
+			  <input type="radio" name="genero" value="mujer"> Mujer
+			  <input type="radio" name="genero" value="otros"> Otros
+			
+			
+			<label for="tareas">¿Carnét de conducir?</label>
+				<input type="checkbox" name="AM" value="AM">AM
+				<input type="checkbox" name="A1" value="A1" > A1
+				<input type="checkbox" name="A2" value="A2" > A2
+				<input type="checkbox" name="B1" value="B1" > B1
+				<input type="checkbox" name="B" value="B" > B
+				<input type="checkbox" name="C1" value="C1" > C1
+				<input type="checkbox" name="D1" value="D1" > D1
+			
+			<label for="correo">Nivel de ingles,del 0 al 10</label>
+			 <input type="number" name="ingles" min="0" max="10">
+			
+			<label for="correo">Correo electrónico</label>
+			<input type="email" id="correo"/>
+
+	  
+		</fieldset>
+		<fieldset>
+		  <legend>Estudios Formativos </legend>
+		 
+		<label for="gm">Grado medio</label>
+          <textarea id="gm" cols="40" rows="2"></textarea>
+		<label for="gs">Grado superior</label>
+          <textarea id="gs" cols="40" rows="2"></textarea>   
+		 		 
+		<label for="estudiosMas">¿Interesado en tener más estudios?</label>
+		
+		  <input type="radio" name="estudiosMas" value="si" checked>SI
+		  <input type="radio" name="estudiosMas" value="no">NO
+
+		</fieldset>
+		<fieldset>				
+		<legend>Experiencia Laboral</legend>
+		 
+		<label for="empresa">Empresa</label>
+		<input type="text" id="empresa" />
+		 
+		<label for="tareas">Tareas realizadas :</label>
+		<textarea type="text" id="tareas" rows="4" cols="50" ></textarea>
+		 
+		<label for="mesInicio">mes Inicio</label>
+		<input type="month" name="mesInicio">
+		 
+		<label for="mesFin">mes Fin</label>
+		<input type="month" name="mesFin">
+		
+		<label for="paginaweb">Pagina web de la empresa</label>
+		<input type="url" name="web">
+		   
+		 
+		  
+		</fieldset>
+					
+		<fieldset class="boxEnviar">				
+		<legend>Finalizar</legend>	
+			<input class="btn"  type="submit" id="btnEnviar" value="Enviar" />
+		</fieldset>
+		
+		</form>
+    </body>
+</html>
+
+
