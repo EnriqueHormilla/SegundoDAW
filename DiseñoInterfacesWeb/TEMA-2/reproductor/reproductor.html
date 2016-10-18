@@ -8,7 +8,27 @@
     </head>
     <body>
         <header ></header>
-    
+        <table>
+            <tr>
+                <td>
+                    <video width="435px" height="435" id="video">
+                        <source src="video.ovg" type="video/ogg"></source>
+                        <source src="video.mp4" type="video/mp4"></source>
+                        <source src="video.webm" type="video/webm"></source>
+                    </video>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="btn_play" onclik="play()">PLAY</button> 
+                    <button id="btn_pause" onclik="pause()">PAUSE</button> 
+                    <button id="btn_stop" onclik="stop()">STOP</button> 
+                    <input type="range" min="0" max="1" step="0.1" id="volumen" onchange="volumen()">
+                    <button id="btn_mute" onclick="silenciar()">Silencio=OFF</button>
+
+                </td>
+            </tr>
+        </table>
         <footer ></footer>
     </body>
 </html>
