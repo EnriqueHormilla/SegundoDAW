@@ -11,18 +11,22 @@
         <table>
             <tr>
                 <td>
-                    <video width="435px" height="435" controls id="fuente">
-                        <source src="video.ovg" type="video/ogg"/>
-                        <source src="video.mp4" type="video/mp4"/>
-                        <source src="video.webm" type="video/webm"/>
+
+                    <video width="435px" height="200px"  id="fuente">
+                        <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"/>
+                        <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+                        <!-- <source src="video.webm" type="video/webm"/>-->
                     </video>
+
+                    <!--  <audio   id="fuente" scr="audio.mp3"/> -->
+
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button id="btn_play" onclik="play()">PLAY</button> 
-                    <button id="btn_pause" onclik="pause()">PAUSE</button> 
-                    <button id="btn_stop" onclik="stop()">STOP</button> 
+                    <button id="btn_play" onclick="play()">PLAY</button> 
+                    <button id="btn_pause" onclick="pause()">PAUSE</button> 
+                    <button id="btn_stop" onclick="stop()">STOP</button> 
                     <input type="range" min="0" max="1" step="0.1" id="volumen" onchange="volumen()">
                     <button id="btn_mute" onclick="silenciar()">Silencio=OFF</button>
                 </td>
@@ -30,25 +34,20 @@
         </table>
         <footer ></footer>
         <script>
+            var audio = document.getElementById("fuente");
             function play() {
-                var audio = document.getElementById("fuente");
                 audio.play();
             }
             function pause() {
-                var audio = document.getElementById("fuente");
                 audio.pause();
             }
             function stop() {
-                var audio = document.getElementById("fuente");
                 audio.load();
             }
             function volumen() {
-                var audio = document.getElementById("fuente");
-                var miVolumen = document.getElementById("volumen").value;
                 audio.volume = miVolumen;
             }
             function silenciar() {
-                var audio = document.getElementById("fuente");
                 if (audio.muted == true) {
                     audio.muted == false;
                     document.getElementById("btn_mute").innerHTML = "SILENCIO==OFF";
