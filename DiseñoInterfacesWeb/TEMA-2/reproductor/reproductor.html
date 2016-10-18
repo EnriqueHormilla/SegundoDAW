@@ -11,10 +11,10 @@
         <table>
             <tr>
                 <td>
-                    <video width="435px" height="435" id="video">
-                        <source src="video.ovg" type="video/ogg"></source>
-                        <source src="video.mp4" type="video/mp4"></source>
-                        <source src="video.webm" type="video/webm"></source>
+                    <video width="435px" height="435" controls id="fuente">
+                        <source src="video.ovg" type="video/ogg"/>
+                        <source src="video.mp4" type="video/mp4"/>
+                        <source src="video.webm" type="video/webm"/>
                     </video>
                 </td>
             </tr>
@@ -25,10 +25,38 @@
                     <button id="btn_stop" onclik="stop()">STOP</button> 
                     <input type="range" min="0" max="1" step="0.1" id="volumen" onchange="volumen()">
                     <button id="btn_mute" onclick="silenciar()">Silencio=OFF</button>
-
                 </td>
             </tr>
         </table>
         <footer ></footer>
+        <script>
+            function play() {
+                var audio = document.getElementById("fuente");
+                audio.play();
+            }
+            function pause() {
+                var audio = document.getElementById("fuente");
+                audio.pause();
+            }
+            function stop() {
+                var audio = document.getElementById("fuente");
+                audio.load();
+            }
+            function volumen() {
+                var audio = document.getElementById("fuente");
+                var miVolumen = document.getElementById("volumen").value;
+                audio.volume = miVolumen;
+            }
+            function silenciar() {
+                var audio = document.getElementById("fuente");
+                if (audio.muted == true) {
+                    audio.muted == false;
+                    document.getElementById("btn_mute").innerHTML = "SILENCIO==OFF";
+                } else {
+                    audio.muted == true;
+                    document.getElementById("btn_mute").innerHTML = "SILENCIO==ON";
+                }
+            }
+        </script>
     </body>
 </html>
