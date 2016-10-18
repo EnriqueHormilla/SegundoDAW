@@ -1,4 +1,4 @@
-<html>
+    <html>
         <head>
             <meta charset="UTF-8">
             <title>Ejercicio Reproductor</title>
@@ -14,7 +14,50 @@
             button{
               border-radius: 10px;
             }
+            .fondoBarraColor {
+                margin: auto;
+                width: 40%;
+                margin-top: 10px;
+                border-radius: 13px;
+                text-align: center;
+            }
+            /*Esto revisar*/
+            progress {
+            	background:none;
+            	border: 0;
+            	border-radius: 15px;
+            	text-align: left;
+            	position:relative;
+            	font-size: 0.8em;
+            }
+            progress::-webkit-progress-bar {
+            	height:11px;
+            	width:150px;
+            	margin:0 auto;
+            	background-color: #CCC;
+            	border-radius: 15px;
+            	box-shadow:0px 0px 6px #777 inset;
+            }
+            progress::-webkit-progress-value {
+            	display:inline-block;
+            	float:left;
+            	height:11px;
+            	margin:0px -10px 0 0;
+            	background: #F70;
+            	border-radius: 15px;
+            	box-shadow:0px 0px 6px #777 inset;
+            }
+  /*Esto revisar*/
 
+            .fondoBarraColorTexto {
+                background-color: #68669a;
+                margin: auto;
+                width: 40%;
+                margin-top: 10px;
+                color: white;
+                border-radius: 13px;
+                text-align: center;
+            }
             </style>
         </head>
         <body>
@@ -44,8 +87,12 @@
                 </tr>
                 <tr>
                   <td>
-                    <progress id="barraProgreso"  value="0"></progress>
-                    <span id="barraProgresoTexto">00:00 </span>/<span id="barraProgresoTotal">00:00 </span>
+                    <div class="fondoBarraColor">
+                        <progress id="barraProgreso"  value="0"></progress>
+                    </div>
+                    <div class="fondoBarraColorTexto">
+                        <span id="barraProgresoTexto">00:00 </span>/<span id="barraProgresoTotal">00:00 </span>
+                    </div>
                   </td>
                 </tr>
             </table>
@@ -102,6 +149,9 @@
                       setTimeout("functionProgreso()", 100);
                   }
                 }
+
+
+
             </script>
         </body>
     </html>
