@@ -1,0 +1,33 @@
+<!--
+Extrae los datos individuales de la fecha actual y muestra un mensaje con
+esta información.
+-->
+<html xmlns="http://wwww.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+			<title> Ejercicio 2</title>
+
+	</head>
+
+	<body>
+
+	<script type="text/javascript">
+
+		var d = new Date();
+		var n = d.getUTCDay();
+
+		document.write("Hoy es en numero este dia de la semana : " +d.getUTCDay()+"<br>");
+		document.write("Hora actual : ");
+				document.write(d.getHours()+":");
+				document.write(d.getMinutes()+":");
+				document.write(+d.getSeconds()+"<br>");
+		document.write("Dia del mes actual : " +d.getDay()+"<br>");
+		document.write("Mes del anio actual : " +(d.getMonth()+1)+"<br>");
+		document.write("Anio actual : " +d.getFullYear()+"<br>");
+
+
+			</script>
+	<noscript>
+	Necesitas activar JavaScript.
+	</body>
+</html>
