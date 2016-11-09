@@ -1,0 +1,81 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    -webkit-box-shadow: inset 0px 0px 114px -7px rgba(0,0,0,0.7);
+    -moz-box-shadow: inset 0px 0px 114px -7px rgba(0,0,0,0.7);
+    box-shadow: inset 0px 0px 114px -7px rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    overflow: auto;
+}
+
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+}
+
+.cabecera {
+    margin-bottom: 3%;
+    position: relative;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+}
+
+.izqda {
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dcha {
+    width: 44%;
+}
+
+img {
+    width: 100%;
+    display: block;
+    content: "";
+}
+
+.sombra {
+    position: relative;
+}
+
+.sombra:before, .sombra:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 8px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    -webkit-box-shadow: 0 15px 0px rgb(214, 214, 214);
+    -moz-box-shadow: 0 15px 0px rgb(214, 214, 214);
+    box-shadow: 0 15px 0px rgb(214, 214, 214);
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+
+.sombra:after {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+    right: 10px;
+    left: auto;
+}
