@@ -9,6 +9,9 @@
     position:absolute;
     z-index: 0;
 }
+html{
+    background-color: gray;
+}
 
 #login:before {
     content:'';
