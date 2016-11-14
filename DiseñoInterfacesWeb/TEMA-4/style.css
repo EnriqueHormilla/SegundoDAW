@@ -1,55 +1,110 @@
-#login{
-    box-shadow: 0 0 2px rgba(0,0,0, 0.2),
-        0 1px 1px rgba(0,0,0,0 .2),
-        0 3px 0 #fff,
-        0 4px 0 rgba(0,0,0, .2),
-        0 6px 0 #fff,
-        0 7px 0 rgba(0,0,0, .2);
-    
-    position:absolute;
-    z-index: 0;
-}
-html{
-    background-color: gray;
-}
-
-#login:before {
-    content:'';
-    position: absolute;
-    z-index: -1;
-    border: 1px dashed #ccc;
-    top: 5px;
-    bottom: 5px;
-    left: 5px;
-    right: 5px;
-    box-shadow: 0 0 0 1px #fff;
-}
-
-h1{
-    text-shadow: 0 1 px 0 rgba(255, 255, 255, .7), 0px 2px 9 rgba(0, 0, 0 ,.5);
+html {
+    width: 100%;
+    height: 100%;
+    color: #5a6676;
     text-transform: uppercase;
-    text-align: center;
-    color: #666;
-    margin: 0 0 30px 0; 
-    letter-spacing: 4px;
-    font: normal 26px/1 Verdana, Helvetica;
-    position: relative;
+
+    background: rgba(39,49,61,1);
+    background: -moz-linear-gradient(top, rgba(39,49,61,1) 24%, rgba(47,60,73,1) 32%, rgba(82,103,122,1) 65%, rgba(94,118,138,1) 78%, rgba(114,143,166,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(24%, rgba(39,49,61,1)), color-stop(32%, rgba(47,60,73,1)), color-stop(65%, rgba(82,103,122,1)), color-stop(78%, rgba(94,118,138,1)), color-stop(100%, rgba(114,143,166,1)));
+    background: -webkit-linear-gradient(top, rgba(39,49,61,1) 24%, rgba(47,60,73,1) 32%, rgba(82,103,122,1) 65%, rgba(94,118,138,1) 78%, rgba(114,143,166,1) 100%);
+    background: -o-linear-gradient(top, rgba(39,49,61,1) 24%, rgba(47,60,73,1) 32%, rgba(82,103,122,1) 65%, rgba(94,118,138,1) 78%, rgba(114,143,166,1) 100%);
+    background: -ms-linear-gradient(top, rgba(39,49,61,1) 24%, rgba(47,60,73,1) 32%, rgba(82,103,122,1) 65%, rgba(94,118,138,1) 78%, rgba(114,143,166,1) 100%);
+    background: linear-gradient(to bottom, rgba(39,49,61,1) 24%, rgba(47,60,73,1) 32%, rgba(82,103,122,1) 65%, rgba(94,118,138,1) 78%, rgba(114,143,166,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27313d', endColorstr='#728fa6', GradientType=0 );
+
+}
+body {
+    font-family: sans-serif;
+    background-color: #c8d0db;
+    max-width: 40%;
+    height: 71%;
+    margin: 0 auto;
+    padding: 3%;
+    margin-top: 4%;
+}
+#contact{
+    height: 85%;
 }
 
-h1:after, h1:before{
-    background-color: #777;
-    content:  "";
-    height: 1px;
-    position: absolute;
-    top: 15px;
-    width: 120px;
+form{
+    height: 100%;
+}
+h1 {
+    font-size: 49px;
+    margin-left: 15%;
 }
 
-h1:after{
-    right: 0;
+fieldset {
+    height: 100%;
+    border-style: none ;
+}
+label {
+    font-size: 23px;
+    padding-top: -4px;
+    float: left;
+    width: 16%;
+    margin-top: 6.5%;
+    text-align: right;
+    font-weight: 600;
+}
+input, textarea {
+    text-transform: uppercase;
+    font-size: 1em;
+    background: #60768d;       
+    min-height: 7%;
+    margin-left: 4%;
+    margin-top: 2%;
+    border-radius: 10px;
+    padding: 12px 0px 8px 14px;
+    float: right;
+    font-weight: 600;
+}
+.cajon{
+     min-width: 71%;
+}
+textArea {
+    font-size: 20px;
+    height: 35%;
+}
+input:hover,textarea:hover {     
+    background-color: #748faa;    
+}
+#enviar {
+    color: white;
+    float: right;
+    min-width: 26% !important;
+    height: 4em;
+    margin-top: 4%;    
+    padding: 3%;
+}
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+    color: #94a7b8;
+}
+textarea:hover::-webkit-input-placeholder,input:hover::-webkit-input-placeholder {
+    color: white;
 }
 
-h1:before{
-    background-image: linear-gradient(right, #777, #fff); 
-    left: 0;
+/* Firefox < 19 */
+textarea::-moz-placeholder, input:-moz-placeholder {
+    color: #94a7b8;
+}
+textarea:hover::-moz-placeholder,input:hover:-moz-placeholder {
+    color: white;
+}
+
+/* Firefox > 19 */
+textarea::-moz-placeholder,input::-moz-placeholder {
+    color: #94a7b8;
+}
+textarea:hover::-moz-placeholder,input:hover::-moz-placeholder {
+    color: white;
+}
+
+/* Internet Explorer 10 */
+textarea::-ms-input-placeholder,input:-ms-input-placeholder {
+    color: #94a7b8;
+}
+textarea:hover::-ms-input-placeholder,input:hover:-ms-input-placeholder {
+    color: white;
 }

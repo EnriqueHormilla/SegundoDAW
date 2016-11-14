@@ -1,28 +1,32 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8" />
-	<title>Formulario</title>
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="style.css" media="print" />
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta charset="utf-8" />
+<title>CSS3 Contact Form</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
+
 <body>
-<div id="wrapper"><!-- #wrapper -->
 
+<div id="contact">
+	<h1>Send an email</h1>
+	<form action="#" method="post">
+		<fieldset>
+			<label for="name">Name:</label>
+			<input class="cajon" type="text" id="name" placeholder="Enter your full name" />
+                        
+			<label for="email">Email:</label>
+			<input class="cajon" type="email" id="email" placeholder="Enter your email address" />
 
-	<form id="login">
-		<h1>Log In</h1>
-		<fieldset id="inputs">
-			<input id="username" type="text" placeholder="Username" autofocus required>   
-			<input id="password" type="password" placeholder="Password" required>
-		</fieldset>
-		<fieldset id="actions">
-			<input type="submit" id="submit" value="Log in">
-			<a href="">Forgot your password?</a><a href="">Register</a>
+			<label for="message">Message:</label>
+			<textarea  class="cajon" id="message" placeholder="What's on your mind?"></textarea>
+
+			<input id="enviar" type="submit" value="Send message" />
+
 		</fieldset>
 	</form>
-	
-</div><!-- #wrapper -->
+</div>
+
 </body>
 </html>
