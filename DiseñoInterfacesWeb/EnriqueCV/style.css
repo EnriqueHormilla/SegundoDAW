@@ -1,0 +1,92 @@
+.flexContenedor{
+    height: 100%;
+    min-width: 100%;
+    margin: -8px;
+}
+/*Seccion  y articulos UNO*/
+.seccionUno {
+    display:flex;
+    background-color: aqua;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.articulo11 {
+    background-color: blueviolet;
+    width: 300px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+
+/*Seccion  y articulos DOS*/
+.seccionDos {
+    background-color: dodgerblue;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+   
+
+}
+.seccionDos > h1{
+    text-align: center;
+}
+.seccionDos > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+.articulo21 {
+    background-color: blueviolet;
+    width: 300px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+.articulo22 {
+    background-color: blueviolet;
+    width: 300px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+.articulo23 {
+    background-color: blueviolet;
+    width: 300px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+/*Seccion  y articulos TRES*/
+.seccionTres {
+    display:flex;
+    background-color: firebrick;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+}
+.lineaTiempo:before{
+
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+		
