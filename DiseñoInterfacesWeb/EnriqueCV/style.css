@@ -1,26 +1,50 @@
-.flexContenedor{
+.flexContenedor {
     height: 103%;
     min-width: 100%;
     margin: -8px;
 }
 
-/*Nadvar  y NadvarSection*/
-.nadvar{
-display:flex;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: flex-end;
-align-content: center;
-align-items: stretch;
-}
-.nadvarSection{
-  width: 300px;
-height: 250px;
 
+/*Nadvar  y NadvarSection*/
+
+.nadvar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: stretch;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    z-index: 1;
+   
 }
+.nadvar> *{
+    font-size: 25px
+}
+.logo{
+    font: normal 30px/1 "Lobster", Helvetica, sans-serif !important;
+    color: white;
+    position: absolute;
+    left: 2%;
+    top: 30%
+}
+.nadvar >a {
+    height:100%;
+    color: white;
+    text-align: center;
+    margin: 1% 1% 0 1;
+    text-decoration:none;
+}
+
+
 /*Seccion  y articulos UNO*/
+
 .seccionUno {
-    display:flex;
+    display: flex;
     background-color: aqua;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -28,29 +52,34 @@ height: 250px;
     align-content: center;
     align-items: center;
 }
-.articulo11 {
-    background-color: blueviolet;
-    min-width: 300px;
-    height: 250px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 0;
+.articulo11{
+    text-align: center;
+    font: normal 50px/1 "Lobster", Helvetica, sans-serif !important;
+}
+.articulo11 > h1 {
+    text-transform: capitalize !important;
+    margin-bottom: 25px;
+    font: normal 100px/1 "Lobster", Helvetica, sans-serif !important;
+    font-size: 50px;
+
+	color: #FFC813;
 }
 
 
 /*Seccion  y articulos DOS*/
+
 .seccionDos {
-
-background-color: dodgerblue;
-display:flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: center;
- align-content: space-between;
- align-items: center;
-  position: relative;
-
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    position: relative;
 }
+
+
 /*
 .seccionDos > h1{
     text-align: center;
@@ -60,15 +89,17 @@ display:flex;
   flex: 1 100%;
 }
 */
-.seccionDos > article {
 
+.seccionDos > article {
     margin: 1% 1% 1% 0;
 }
-.seccionDos > h1{
-  position: absolute;
-  text-align: center;
-  top: 0;
+
+.seccionDos > h1 {
+    position: absolute;
+    text-align: center;
+    top: 0;
 }
+
 .articulo21 {
     background-color: blueviolet;
     min-width: 300px;
@@ -77,38 +108,48 @@ display:flex;
     flex-shrink: 0;
     flex-basis: 0;
 }
+
 .articulo22 {
     background-color: blueviolet;
-  min-width: 300px;
-    height: 250px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 0;
-}
-.articulo23 {
-    background-color: blueviolet;
-  min-width: 300px;
+    min-width: 300px;
     height: 250px;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 0;
 }
 
+.articulo23 {
+    background-color: blueviolet;
+    min-width: 300px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+
 /*Seccion  y articulos TRES*/
+
 .seccionTres {
-  position: relative;
-    display:flex;
+    
+    position: relative;
+    display: flex;
     background-color: firebrick;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: stretch;
     align-items: stretch;
 }
-.seccionTres > article {
-  margin: 1%;
-  text-align: center;
+.seccionTres > h1 {
+     margin: 1%;
+    text-align: center;
 }
+.seccionTres > article {
+    margin: 1%;
+    text-align: center;
+}
+
 .articulo31 {
     background-color: #470f7b;
     min-width: 300px;
@@ -117,6 +158,7 @@ display:flex;
     flex-shrink: 0;
     flex-basis: 200px;
 }
+
 .articulo32 {
     background-color: #470f7b;
     min-width: 300px;
@@ -125,6 +167,7 @@ display:flex;
     flex-shrink: 0;
     flex-basis: 200px;
 }
+
 .articulo33 {
     background-color: #470f7b;
     min-width: 300px;
@@ -141,6 +184,6 @@ display:flex;
     bottom: 0;
     left: 40px;
     width: 2px;
-    margin-left: 47%;
+    margin-left: 48%;
     background-color: #f1f1f1;
 }

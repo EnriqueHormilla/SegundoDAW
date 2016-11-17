@@ -2,7 +2,9 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
     <title>Enrique Hormilla CV</title>
     <!--
     http://flexboxin5.com/
@@ -14,31 +16,109 @@
 
     </header>
     <nav class="fondoAzulOscuro">
-      <div class="nadvar">
-        <a class="nadvarSection"></a>
-        <a class="nadvarSection"></a>
-        <a class="nadvarSection"></a>
-      </div>
+        <div class="nadvar">
+            <span class="logo">Enrique Hormilla</span>
+            <a href="#Conocimientos" title="Conocimientos">Conocimientos</a>
+            <a href="#CV" title="Conocimientos">Curriculum Vitae</a>
+            <a href="#Contacto" title="Contacto">Contacto</a>
+        </div>
     </nav>
 
+    <section class="flexContenedor seccionUno">
+        <!-- Portada -->
+        <article class="articulo11">
+            <video autoplay loop muted id="myVideo">
+                <source src="mp4/code.mp4" type="video/mp4">
+                <source src="mp4/code.webm" type="video/webm">
+            </video>
+            <h1>Enrique Hormilla Aragón</h1>
+            <div> Técnico de Sistemas y Programador web </div>
+            <a href="#Conocimientos" class="page-scroll btn btn-xl">
+                <i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i> </a>
+        </article>
+    </section>
 
-        <section class="flexContenedor seccionUno">
-            <article class="articulo11">
-          hola
-            </article>
-        </section>
-        <section class="flexContenedor seccionDos">
-           <h1>Estudios</h1>
-            <article class="articulo21">adios1</article>
-            <article class="articulo22">adios2</article>
-            <article class="articulo23">adios3</article>
-        </section>
-        <section class="flexContenedor seccionTres">
-           <ul class="lineaTiempo"></ul>
-            <article class="articulo31">adios1</article>
-            <article class="articulo32">adios2</article>
-            <article class="articulo33">adios3</article>
-        </section>
+    <a name="Conocimientos"></a>
+    <section class="flexContenedor seccionDos">
+        <!-- Conocimientos -->
+        <h1>Estudios</h1>
+        <article class="articulo21">
+           <i class="fa fa-terminal fa-4x" aria-hidden="true"></i>
+            <h1>Admistración de sistemas operativos (ASIR)</h1>
+            <div>He cursado Grado superior dual bilingüe en Los boscos,de 2013 hasta 2015. El curso se componen principalmente de:</div>
+            <div>
+                <ul class="center">
+                    <li class="listaSection2">
+                        Gestión ,mantenimiento y seguridad de insfrastructuras de red.
+                    </li>
+                    <li class="listaSection2">
+                        Creación y consultas de base de datos <span class="negrita">MySQL,Postgre</span>.
+                    </li>
+                    <li class="listaSection2">
+                        Mantenimiento,creación e implementacion de servidores <span class="negrita">Windows</span> con Active directory.
+                    </li>
+                    <li class="listaSection2">
+                        Mantenimiento,creación e implementacion de servidores <span class="negrita">Linux</span>.
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="articulo22">
+            <i class="fa fa-code fa-4x" aria-hidden="true"></i>
+            <h1>Desarrollo de aplicaciones web (DAW)</h1>
+           
+            <div>Actualmente estoy cursando este grado superior en IES Comercio.En este grado se estudia:</div>
+            <div>
+                <ul>
+                    <li class="listaSection2">
+                        Programación estructural y orientada a objeto en Java.
+                    </li>
+                    <li class="listaSection2">
+                        Utilización de distintos entornos de programación<span class="negrita">Netbeans y Eclipse</span>.
+                    </li>
+                    <li class="listaSection2">
+                        Creación mantenimiento y consultas de base de datos <span class="negrita">MySQL,Postgre</span>.
+                    </li>
+                </ul>
+            </div>
+
+        </article>
+         <article class="articulo24">
+           <i class="fa fa-internet-explorer fa-4x" aria-hidden="true"></i>
+           <!-- <i class="fa fa-cloud" aria-hidden="true"></i> -->
+            <h1>Certificacion en ADMINISTRACIÓN Y CONFIGURACIÓN DE SISTEMAS INFORMÁTICOS Y DATA CENTERS</h1>
+            <div>Nivel medio hablado y escrito ,junto con vocabulario técnico para informática,he cursado un ciclo dual bilingüe y equivalente a un A-2 por bachillerato. Bachillerato de Humanidades.Cursado en Marianistas (2010-2012).</div>
+
+        </article>
+        
+        <article class="articulo25">
+           <i class="fa fa-database fa-4x" aria-hidden="true"></i>
+            <h1>Microsoft Dynamics NAV  </h1>
+            <div>Nivel medio hablado y escrito ,junto con vocabulario técnico para informática,he cursado un ciclo dual bilingüe y equivalente a un A-2 por bachillerato. Bachillerato de Humanidades.Cursado en Marianistas (2010-2012).</div>
+
+        </article>
+         <article class="articulo26">
+           <i class="fa fa-book fa-4x" aria-hidden="true"></i>
+            <h1>Estudios Previos e idiomas </h1>
+            <div>Nivel medio hablado y escrito ,junto con vocabulario técnico para informática,he cursado un ciclo dual bilingüe y equivalente a un A-2 por bachillerato. Bachillerato de Humanidades.Cursado en Marianistas (2010-2012).</div>
+
+        </article>
+    </section>
+
+    <a name="CV"></a>
+    <section class="flexContenedor seccionTres">
+        <!-- CV -->
+        <h1>CURRÍCULUM VITAE</h1>
+        <ul class="lineaTiempo"></ul>
+        <article class="articulo31">adios1</article>
+        <article class="articulo32">adios2</article>
+        <article class="articulo33">adios3</article>
+    </section>
+
+    <a name="Contacto"></a>
+    <section class="flexContenedor seccionCuatro">
+
+    </section>
 
     <footer class="fondoAzulOscuro">
 
