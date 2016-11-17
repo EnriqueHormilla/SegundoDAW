@@ -1,7 +1,22 @@
 .flexContenedor{
-    height: 100%;
+    height: 103%;
     min-width: 100%;
     margin: -8px;
+}
+
+/*Nadvar  y NadvarSection*/
+.nadvar{
+display:flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-end;
+align-content: center;
+align-items: stretch;
+}
+.nadvarSection{
+  width: 300px;
+height: 250px;
+
 }
 /*Seccion  y articulos UNO*/
 .seccionUno {
@@ -15,7 +30,7 @@
 }
 .articulo11 {
     background-color: blueviolet;
-    width: 300px;
+    min-width: 300px;
     height: 250px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -25,16 +40,18 @@
 
 /*Seccion  y articulos DOS*/
 .seccionDos {
-    background-color: dodgerblue;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-   
+
+background-color: dodgerblue;
+display:flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-content: space-between;
+ align-items: center;
+  position: relative;
 
 }
+/*
 .seccionDos > h1{
     text-align: center;
 }
@@ -42,9 +59,19 @@
   padding: 10px;
   flex: 1 100%;
 }
+*/
+.seccionDos > article {
+
+    margin: 1% 1% 1% 0;
+}
+.seccionDos > h1{
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
 .articulo21 {
     background-color: blueviolet;
-    width: 300px;
+    min-width: 300px;
     height: 250px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -52,7 +79,7 @@
 }
 .articulo22 {
     background-color: blueviolet;
-    width: 300px;
+  min-width: 300px;
     height: 250px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -60,7 +87,7 @@
 }
 .articulo23 {
     background-color: blueviolet;
-    width: 300px;
+  min-width: 300px;
     height: 250px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -69,6 +96,7 @@
 
 /*Seccion  y articulos TRES*/
 .seccionTres {
+  position: relative;
     display:flex;
     background-color: firebrick;
     flex-direction: column;
@@ -77,16 +105,42 @@
     align-content: stretch;
     align-items: stretch;
 }
-.lineaTiempo:before{
+.seccionTres > article {
+  margin: 1%;
+  text-align: center;
+}
+.articulo31 {
+    background-color: #470f7b;
+    min-width: 300px;
+    height: 250px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
+}
+.articulo32 {
+    background-color: #470f7b;
+    min-width: 300px;
+    height: 250px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
+}
+.articulo33 {
+    background-color: #470f7b;
+    min-width: 300px;
+    height: 250px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
+}
 
+.lineaTiempo:before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 40px;
     width: 2px;
-    margin-left: -1.5px;
+    margin-left: 47%;
     background-color: #f1f1f1;
 }
-
-		
