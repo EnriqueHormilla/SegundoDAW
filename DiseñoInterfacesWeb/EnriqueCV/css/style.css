@@ -1,12 +1,20 @@
 .flexContenedor {
-    height: 103%;
+    min-height: 103%;
     min-width: 100%;
     margin: -8px;
 }
 
+.flexContenedor1 {
+    min-width: 100%;
+    margin: -8px;
+}
+
+
 /*
 ICONOS    http://fontawesome.io/icons/
 */
+
+
 /*Nadvar  y NadvarSection*/
 
 .nadvar {
@@ -22,24 +30,26 @@ ICONOS    http://fontawesome.io/icons/
     height: 50px;
     left: 0;
     z-index: 1;
-   
 }
-.nadvar> *{
+
+.nadvar> * {
     font-size: 25px
 }
-.logo{
+
+.logo {
     font: normal 30px/1 "Lobster", Helvetica, sans-serif !important;
     color: white;
     position: absolute;
     left: 2%;
     top: 30%
 }
+
 .nadvar >a {
-    height:100%;
+    height: 100%;
     color: white;
     text-align: center;
     margin: 1% 1% 0 1;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 
@@ -53,60 +63,70 @@ ICONOS    http://fontawesome.io/icons/
     justify-content: center;
     align-content: center;
     align-items: center;
-    
     background-image: url(../imgs/portada.png);
-		/*padding: 12% 0 0 0;*/
-		 opacity: 0.9;
-		 top: 0; bottom: 0; left: 0; right: 0;
-		background-position: center top !important;
-		background-size: cover !important;
-		background-attachment: fixed !important;
+    /*padding: 12% 0 0 0;*/
+    opacity: 0.9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
 }
-.articulo11{
+
+.articulo11 {
     text-align: center;
     color: white;
     font: normal 50px/1 "Lobster", Helvetica, sans-serif !important;
 }
+
 .articulo11 > h1 {
     text-transform: capitalize !important;
     margin-bottom: 25px;
     font: normal 100px/1 "Lobster", Helvetica, sans-serif !important;
     font-size: 50px;
-	color: #FFC813;
+    color: #FFC813;
 }
-.articulo11 > a>i{
+
+.articulo11 > a>i {
     padding-top: 5%;
-    color:#FFC813;
+    color: #FFC813;
 }
-#myVideo{
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		opacity: 0.4;
-		top:0;
-		right:0;
-		width: 100%;
-		height: 100%;
-		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		/* background-image: our video */;
-  		background-position: center center;
-  		background-size: contain;
-   		object-fit: cover; /*cover video background */
-   		z-index:-1;
-	}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black;
+    /* in case the video doesn't fit the whole page*/
+    /* background-image: our video */
+    ;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    /*cover video background */
+    z-index: -1;
+}
+
 
 /*Seccion  y articulos DOS*/
 
 .seccionDos {
-    background-color: dodgerblue;
+    background-color: #FFC813;
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-    align-items: center;
-    position: relative;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
 }
 
 
@@ -120,36 +140,79 @@ ICONOS    http://fontawesome.io/icons/
 }
 */
 
-.seccionDos > article {
-    margin: 1% 1% 1% 0;
+.seccionDos > h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+    color: white;
+    margin: auto;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
 
-.seccionDos > h1 {
-    position: absolute;
+.seccionDos >.line {
     text-align: center;
-    top: 0;
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    height: 3px;
+    background: #fff;
+    background-image: -webkit-linear-gradient(left, #FFC813, #fff, #FFC813);
+    background-image: -moz-linear-gradient(left, #FFC813, #fff, #FFC813);
+    background-image: -ms-linear-gradient(left, #FFC813, #fff, #FFC813);
+    background-image: -o-linear-gradient(left, #FFC813, #fff, #FFC813);
+    opacity: 0.5;
 }
 
 .seccionDos >article {
-    background-color: blueviolet;
-    min-width: 300px;
-    height: 250px;
-    flex-grow: 0;
+    text-align: center;
+    color: #666;
+    flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
+    /* margin-left: 1%; */
+    margin: 0 2% 0 2%;
 }
 
-.articulo22 {
+.seccionDos >article >h1 {
+    margin: 24px 0;
+    text-transform: none;
+    font-size: 30px;
+    color: #666;
+    
+    font-weight: 800;
 }
 
-.articulo23 {
+.seccionDos >article >p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
 }
+
+.seccionDos >article >ul {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.seccionDos > article >span >.iconoCirculo {
+    color: white;
+}
+
+.seccionDos > article >span >.iconoInterior {
+    color: #FFC813;
+}
+
+.articulo22 {}
+
+.articulo23 {}
 
 
 /*Seccion  y articulos TRES*/
 
 .seccionTres {
-    
     position: relative;
     display: flex;
     background-color: firebrick;
@@ -159,10 +222,12 @@ ICONOS    http://fontawesome.io/icons/
     align-content: stretch;
     align-items: stretch;
 }
+
 .seccionTres > h1 {
-     margin: 1%;
+    margin: 1%;
     text-align: center;
 }
+
 .seccionTres > article {
     margin: 1%;
     text-align: center;
@@ -206,9 +271,10 @@ ICONOS    http://fontawesome.io/icons/
     background-color: #f1f1f1;
 }
 
+
 /*Seccion  y articulos CUATRO*/
+
 .seccionCuatro {
-    
     position: relative;
     display: flex;
     background-color: chocolate;
