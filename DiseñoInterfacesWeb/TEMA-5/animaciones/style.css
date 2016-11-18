@@ -1,6 +1,6 @@
 body {
     background-image: url(fondo.jpg);
-    animation: animationFondo 5s infinite;
+    animation: animationFondo 3s infinite;
     animation-timing-function: linear;
 }
 
@@ -8,6 +8,7 @@ body {
     background-image: url(coche2.png);
     width: 250px;
     height: 192px;
+    margin: 0 auto;
     position: relative;
     background-repeat: no-repeat;
 }
@@ -20,7 +21,8 @@ body {
     width: 41;
     top: 105px;
     left: 26;
-    animation: animationRueda 5s infinite;
+    animation: animationRueda 1s infinite;
+     animation-timing-function: linear;
 }
 
 .ruedaD {
@@ -31,7 +33,8 @@ body {
     width: 41;
     top: 105px;
     right: 26;
-    animation: animationRueda 5s infinite;
+    animation: animationRueda 1s infinite;
+     animation-timing-function: linear;
 }
 
 @keyframes animationRueda {
