@@ -1,0 +1,61 @@
+body {
+    background-image: url(fondo.jpg);
+    animation: animationFondo 5s infinite;
+    animation-timing-function: linear;
+}
+
+.coche {
+    background-image: url(coche2.png);
+    width: 250px;
+    height: 192px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.ruedaI {
+    position: absolute;
+    background-image: url(rueda2.png);
+    background-repeat: no-repeat;
+    height: 41;
+    width: 41;
+    top: 105px;
+    left: 26;
+    animation: animationRueda 5s infinite;
+}
+
+.ruedaD {
+    position: absolute;
+    background-image: url(rueda2.png);
+    background-repeat: no-repeat;
+    height: 41;
+    width: 41;
+    top: 105px;
+    right: 26;
+    animation: animationRueda 5s infinite;
+}
+
+@keyframes animationRueda {
+    100% {
+        transform: rotate(360deg);
+         animation-timing-function: linear;
+    }
+    
+}
+
+@keyframes animationFondo {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 25% 0%;
+    }
+    50% {
+        background-position: 50% 0%;
+    }
+    75% {
+        background-position:75% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
