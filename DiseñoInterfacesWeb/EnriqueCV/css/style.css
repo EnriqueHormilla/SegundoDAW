@@ -145,7 +145,7 @@ ICONOS    http://fontawesome.io/icons/
     width: 100%;
     font-size: 60px;
     color: white;
-    margin: auto;
+    margin: 25px auto;
     line-height: 1.1;
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -179,20 +179,20 @@ ICONOS    http://fontawesome.io/icons/
 .seccionDos >article >h1 {
     margin: 24px 0;
     text-transform: none;
-    font-size: 30px;
+    font-size: 25px;
     color: #666;
     
     font-weight: 800;
 }
 
 .seccionDos >article >p {
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
     line-height: 1.5;
 }
 
 .seccionDos >article >ul {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.5;
     text-align: left;
 }

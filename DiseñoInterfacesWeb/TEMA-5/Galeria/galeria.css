@@ -1,0 +1,81 @@
+#galeria {
+    width: 700px;
+    margin: 60px auto 60px auto;
+}
+
+figure {
+    float: left;
+    margin: 0 10px 10px 0;
+    background-color: #eee;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 15px #333;
+    padding: 10px 10px 25px 10px;
+    position: relative;
+}
+figure:hover{
+    box-shadow: 3px 5px 15px #000;
+    background-color: white;
+    z-index: 4;    
+}
+figcaption {
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+
+.f1 {
+    -ms-transform: rotate(-7deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-7deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+    width: 230px;
+    z-index: 1;
+}
+
+.f1:hover{
+    -ms-transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+}
+
+.f2 {
+    z-index: 0;
+    -ms-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.f2:hover{
+    -ms-transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(12deg);
+}
+
+.f3 {
+    z-index: 2;
+    -ms-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.f3:hover{   
+    -ms-transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+}
+
+.f4 {
+    z-index: 3;
+    -ms-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    width: 265px;
+}
+
+.f4:hover{ 
+    -ms-transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+}

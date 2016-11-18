@@ -1,0 +1,38 @@
+#diaporama {
+    margin: 60px auto 60px auto;
+}
+
+figure {
+    position: relative;
+    margin: 30px 0px 30px 0px;
+    left: 0;
+    top: 0;
+    transform: scale(0.5, 0.5);
+    height: 170px;
+    width: 170px;
+}
+
+figure:hover {
+    transform: scale(1, 1);
+    transition: 1s linear;
+}
+
+figcaption {
+    font: 3em Verdana;
+}
+
+.f1:hover {
+    transform: translate(250px, 250px);
+}
+
+.f2:hover {
+    transform: translate(250px, 50px);
+}
+
+.f3:hover {
+    transform: translate(250px, -150px);
+}
+
+.f4:hover {
+    transform: translate(250px, -350px);
+}
