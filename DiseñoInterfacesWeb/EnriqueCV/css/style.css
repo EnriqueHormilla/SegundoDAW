@@ -1,8 +1,8 @@
 body {
     overflow-x: hidden;
-      font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .flexContenedor {
     min-height: 103%;
     min-width: 100%;
@@ -13,12 +13,15 @@ body {
     min-width: 100%;
     margin: -8px;
 }
-.alignleft{
+
+.alignleft {
     float: left;
 }
-.alinright{
+
+.alinright {
     float: right;
 }
+
 
 /*
 ICONOS    http://fontawesome.io/icons/
@@ -39,7 +42,7 @@ ICONOS    http://fontawesome.io/icons/
     width: 100%;
     height: 50px;
     left: 0;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .nadvar> * {
@@ -53,7 +56,9 @@ ICONOS    http://fontawesome.io/icons/
     left: 2%;
     top: 30%
 }
-
+.logo:hover{
+     animation: iconosRotacion 1s 1;
+}
 .nadvar >a {
     height: 100%;
     color: white;
@@ -63,7 +68,11 @@ ICONOS    http://fontawesome.io/icons/
 }
 
 
-/*Seccion  y articulos UNO*/
+/*
+****************************************************************
+                         SECCION UNO   
+******************************************************************
+*/
 
 .seccionUno {
     display: flex;
@@ -99,9 +108,22 @@ ICONOS    http://fontawesome.io/icons/
     color: #FFC813;
 }
 
-.articulo11 > a>i {
-    padding-top: 5%;
+#flecha {  
+
     color: #FFC813;
+    animation: felchaMovimiento 1s infinite;
+}
+
+#flecha:hover {}
+
+@keyframes felchaMovimiento {
+    50% {
+        -ms-transform: translate(0, 50%);
+        /* IE 9 */
+        -webkit-transform: translate(0, 50%);
+        /* Safari */
+        transform: translate(0, 20%);
+    }
 }
 
 #myVideo {
@@ -126,7 +148,11 @@ ICONOS    http://fontawesome.io/icons/
 }
 
 
-/*Seccion  y articulos DOS*/
+/*
+****************************************************************
+                         SECCION DOS   
+******************************************************************
+*/
 
 .seccionDos {
     background-color: #FFC813;
@@ -153,31 +179,13 @@ ICONOS    http://fontawesome.io/icons/
 .seccionDos > h1 {
     text-align: center;
     width: 100%;
-    font-size: 60px;
     color: white;
-    margin: 53px auto;
+    margin: 80px auto 0 auto;
     line-height: 1.1;
     text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    
+    font: normal 60px/1 "Lobster", Helvetica, sans-serif !important;
 }
-
-.seccionDos >.line {
-    text-align: center;
-    width: 80%;
-    position: absolute;
-    top: 17%;
-    height: 3px;
-    background: #fff;
-    background-image: -webkit-linear-gradient(left, #FFC813, #fff, #FFC813);
-    background-image: -moz-linear-gradient(left, #FFC813, #fff, #FFC813);
-    background-image: -ms-linear-gradient(left, #FFC813, #fff, #FFC813);
-    background-image: -o-linear-gradient(left, #FFC813, #fff, #FFC813);
-    opacity: 0.5;
-}
-
-
 
 .seccionDos >article {
     text-align: center;
@@ -194,11 +202,11 @@ ICONOS    http://fontawesome.io/icons/
     text-transform: none;
     font-size: 25px;
     color: #666;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .seccionDos >article >p {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     line-height: 1.5;
 }
@@ -217,18 +225,33 @@ ICONOS    http://fontawesome.io/icons/
     color: #FFC813;
 }
 
+.seccionDos > article >span:hover {
+    animation: iconosRotacion 1s 1;
+}
+
+@keyframes iconosRotacion {
+    50% {
+        transform: rotate3d(1, 0, 0, 180deg);
+        animation-timing-function: linear;
+    }
+}
 
 .articulo22 {}
 
 .articulo23 {}
 
 
-/*Seccion  y articulos TRES*/
+/*
+****************************************************************
+                         SECCION TRES   
+******************************************************************
+*/
 
 .seccionTres {
     position: relative;
     display: flex;
-    background-color: firebrick;
+    background-color: #cecece;
+    color: #666;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
@@ -237,90 +260,82 @@ ICONOS    http://fontawesome.io/icons/
 }
 
 .seccionTres > h1 {
-    margin: 1%;
     text-align: center;
+    width: 100%;
+    line-height: 1.1;
+    text-transform: uppercase;
     font-weight: 700;
-}
-.seccionTres > h1 {
-
-    font-weight: 400;
+    font: normal 60px/1 "Lobster", Helvetica, sans-serif !important;
 }
 
 .seccionTres > article {
     margin: 1%;
     text-align: center;
-}
-.oDerecha {
-    margin-left: 3%;
-    text-align: left;
-    float: left;
-    width: 40%;
+    padding: 0 10% 0 10%;
+    z-index: 1;
 }
 
+.oDerecha {
+    text-align: left;
+    float: right;
+}
 
 .oIzquierda {
-    margin-left: 9%;
     text-align: right;
     float: left;
-    width: 40%;
 }
-.redondearContenedor {
 
+.redondearContenedor {}
+
+.textoContenedor {
+    width: 40%;
+    padding: 1%;
 }
+
 .redondearImg {
-    display: inline;
-    margin: 70px 0 0 0;
+    position: inline;
+    border: 5px solid white;
     height: 200;
     width: 200;
+    margin: 40 27 0 0;
     -webkit-box-shadow: 7px 9px 39px -13px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 7px 9px 39px -13px rgba(0, 0, 0, 0.75);
-    /* box-shadow: 7px 9px 39px -13px rgba(0, 0, 0, 0.75); */
-    /* background-repeat: no-repeat; */
-    /* background-position: 51%; */
     border-radius: 50%;
-    /* background-size: 103% auto; */
-}
-/*
-.articulo31 {
-    background-color: #470f7b;
-    min-width: 300px;
-    height: 250px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 200px;
 }
 
-.articulo32 {
-    background-color: #470f7b;
-    min-width: 300px;
-    height: 250px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 200px;
+.redondearImg:hover {
+    border: 5px solid #FB9A00;
+    animation: imagenesRotacion 1s 1;
 }
 
-.articulo33 {
-    background-color: #470f7b;
-    min-width: 300px;
-    height: 250px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 200px;
+#manantial {
+    background-color: white;
+    background-attachment: local;
 }
-*/
-.lineaTiempo:before {
-    content: "";
+
+hr.v {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: 47%;
-    background-color: #f1f1f1;
+    left: 49%;
+    top: 20%;
+    width: 4;
+    border-style: none;
+    border-left: 4px solid white;
+    height: 75%;
+}
+
+@keyframes imagenesRotacion {
+    100% {
+        transform: rotate(360deg);
+        animation-timing-function: linear;
+    }
 }
 
 
-/*Seccion  y articulos CUATRO*/
+/*
+****************************************************************
+                         SECCION CUATRO   
+******************************************************************
+*/
 
 .seccionCuatro {
     position: relative;
