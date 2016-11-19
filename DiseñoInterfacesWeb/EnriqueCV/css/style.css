@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+      font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
 .flexContenedor {
     min-height: 103%;
     min-width: 100%;
@@ -8,7 +13,12 @@
     min-width: 100%;
     margin: -8px;
 }
-
+.alignleft{
+    float: left;
+}
+.alinright{
+    float: right;
+}
 
 /*
 ICONOS    http://fontawesome.io/icons/
@@ -145,18 +155,19 @@ ICONOS    http://fontawesome.io/icons/
     width: 100%;
     font-size: 60px;
     color: white;
-    margin: 25px auto;
+    margin: 53px auto;
     line-height: 1.1;
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
+    
 }
 
 .seccionDos >.line {
     text-align: center;
     width: 80%;
     position: absolute;
-    top: 15%;
+    top: 17%;
     height: 3px;
     background: #fff;
     background-image: -webkit-linear-gradient(left, #FFC813, #fff, #FFC813);
@@ -165,6 +176,8 @@ ICONOS    http://fontawesome.io/icons/
     background-image: -o-linear-gradient(left, #FFC813, #fff, #FFC813);
     opacity: 0.5;
 }
+
+
 
 .seccionDos >article {
     text-align: center;
@@ -181,7 +194,6 @@ ICONOS    http://fontawesome.io/icons/
     text-transform: none;
     font-size: 25px;
     color: #666;
-    
     font-weight: 800;
 }
 
@@ -205,6 +217,7 @@ ICONOS    http://fontawesome.io/icons/
     color: #FFC813;
 }
 
+
 .articulo22 {}
 
 .articulo23 {}
@@ -226,13 +239,48 @@ ICONOS    http://fontawesome.io/icons/
 .seccionTres > h1 {
     margin: 1%;
     text-align: center;
+    font-weight: 700;
+}
+.seccionTres > h1 {
+
+    font-weight: 400;
 }
 
 .seccionTres > article {
     margin: 1%;
     text-align: center;
 }
+.oDerecha {
+    margin-left: 3%;
+    text-align: left;
+    float: left;
+    width: 40%;
+}
 
+
+.oIzquierda {
+    margin-left: 9%;
+    text-align: right;
+    float: left;
+    width: 40%;
+}
+.redondearContenedor {
+
+}
+.redondearImg {
+    display: inline;
+    margin: 70px 0 0 0;
+    height: 200;
+    width: 200;
+    -webkit-box-shadow: 7px 9px 39px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 9px 39px -13px rgba(0, 0, 0, 0.75);
+    /* box-shadow: 7px 9px 39px -13px rgba(0, 0, 0, 0.75); */
+    /* background-repeat: no-repeat; */
+    /* background-position: 51%; */
+    border-radius: 50%;
+    /* background-size: 103% auto; */
+}
+/*
 .articulo31 {
     background-color: #470f7b;
     min-width: 300px;
@@ -259,7 +307,7 @@ ICONOS    http://fontawesome.io/icons/
     flex-shrink: 0;
     flex-basis: 200px;
 }
-
+*/
 .lineaTiempo:before {
     content: "";
     position: absolute;
@@ -267,7 +315,7 @@ ICONOS    http://fontawesome.io/icons/
     bottom: 0;
     left: 40px;
     width: 2px;
-    margin-left: 48%;
+    margin-left: 47%;
     background-color: #f1f1f1;
 }
 
