@@ -1,5 +1,4 @@
-body {
-    overflow-x: hidden;
+html {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -38,9 +37,9 @@ ICONOS    http://fontawesome.io/icons/
     align-content: center;
     align-items: stretch;
     position: fixed;
-    background-color: black;
+    background-color: #222;
     width: 100%;
-    height: 50px;
+    height: 60;
     left: 0;
     z-index: 1000;
 }
@@ -56,9 +55,11 @@ ICONOS    http://fontawesome.io/icons/
     left: 2%;
     top: 30%
 }
-.logo:hover{
-     animation: iconosRotacion 1s 1;
+
+.logo:hover {
+    animation: iconosRotacion 1s 1;
 }
+
 .nadvar >a {
     height: 100%;
     color: white;
@@ -67,6 +68,9 @@ ICONOS    http://fontawesome.io/icons/
     text-decoration: none;
 }
 
+.nadvar >a:hover {
+   color:  #FFC813;
+}
 
 /*
 ****************************************************************
@@ -76,7 +80,6 @@ ICONOS    http://fontawesome.io/icons/
 
 .seccionUno {
     display: flex;
-    background-color: aqua;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
@@ -108,23 +111,14 @@ ICONOS    http://fontawesome.io/icons/
     color: #FFC813;
 }
 
-#flecha {  
-
+#flecha {
     color: #FFC813;
     animation: felchaMovimiento 1s infinite;
 }
 
 #flecha:hover {}
 
-@keyframes felchaMovimiento {
-    50% {
-        -ms-transform: translate(0, 50%);
-        /* IE 9 */
-        -webkit-transform: translate(0, 50%);
-        /* Safari */
-        transform: translate(0, 20%);
-    }
-}
+
 
 #myVideo {
     position: absolute;
@@ -137,13 +131,9 @@ ICONOS    http://fontawesome.io/icons/
     height: 100%;
     background-size: 100% 100%;
     background-color: black;
-    /* in case the video doesn't fit the whole page*/
-    /* background-image: our video */
-    ;
-    background-position: center center;
+    background-position: center;
     background-size: contain;
     object-fit: cover;
-    /*cover video background */
     z-index: -1;
 }
 
@@ -160,9 +150,10 @@ ICONOS    http://fontawesome.io/icons/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-content: stretch;
     align-items: stretch;
+    padding-top: 250px;
 }
 
 
@@ -178,10 +169,9 @@ ICONOS    http://fontawesome.io/icons/
 
 .seccionDos > h1 {
     text-align: center;
-    width: 100%;
+    position: absolute;
+    top: 40;
     color: white;
-    margin: 80px auto 0 auto;
-    line-height: 1.1;
     text-transform: uppercase;
     font-weight: 700;
     font: normal 60px/1 "Lobster", Helvetica, sans-serif !important;
@@ -190,11 +180,11 @@ ICONOS    http://fontawesome.io/icons/
 .seccionDos >article {
     text-align: center;
     color: #666;
+    margin: 0 2% 0 2%;
+    min-width: 300px;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
-    /* margin-left: 1%; */
-    margin: 0 2% 0 2%;
 }
 
 .seccionDos >article >h1 {
@@ -229,12 +219,7 @@ ICONOS    http://fontawesome.io/icons/
     animation: iconosRotacion 1s 1;
 }
 
-@keyframes iconosRotacion {
-    50% {
-        transform: rotate3d(1, 0, 0, 180deg);
-        animation-timing-function: linear;
-    }
-}
+
 
 .articulo22 {}
 
@@ -262,6 +247,7 @@ ICONOS    http://fontawesome.io/icons/
 .seccionTres > h1 {
     text-align: center;
     width: 100%;
+    margin-top: 4%;
     line-height: 1.1;
     text-transform: uppercase;
     font-weight: 700;
@@ -323,12 +309,7 @@ hr.v {
     height: 75%;
 }
 
-@keyframes imagenesRotacion {
-    100% {
-        transform: rotate(360deg);
-        animation-timing-function: linear;
-    }
-}
+
 
 
 /*
@@ -338,12 +319,170 @@ hr.v {
 */
 
 .seccionCuatro {
+    background-color: #FFC813;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+    margin: 0 -8 0 -8;
+    padding: 10 0 10 0;
+    min-width: 100%;
+}
+.seccionCuatro >a {
+ text-decoration: none;
+}
+.seccionCuatro >a> article {
+    margin: 0 100 0 0;
+    text-align: center;
+    width: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+.seccionCuatro >a >article >h1 {
+    text-transform: none;
+    font-size: 110px;
+    color: #666;
+    font-weight: 600;
+    font: normal 20px/1 "Lobster", Helvetica, sans-serif !important;
+}
+
+.seccionCuatro >a> article >i {
+    font-size: 50px;
+    color: white;
+    background-color: #FFC813;
+}
+
+/*
+****************************************************************
+                         SECCION CONTACTO   
+******************************************************************
+*/
+
+.seccionCinto {
     position: relative;
     display: flex;
-    background-color: chocolate;
+    background-color: #cecece;
+    color: #666;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: stretch;
     align-items: stretch;
+        max-height: 100%;
+    min-height: 90%;
+    min-width: 100%;
+    margin: -8px;
+}
+
+.seccionCinto > h1 {
+    
+    text-align: center;
+    width: 100%;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-weight: 700;
+    font: normal 50px/1 "Lobster", Helvetica, sans-serif !important;
+    
+}
+
+.seccionCinto > article {
+margin: 0 auto;
+    width: 65%;
+}
+fieldset {   
+    border-style: none ;
+}
+input, textarea {
+    
+    text-transform: uppercase;
+    font-size: 1em;
+    background: #60768d;       
+    min-height: 7%;
+    margin-left: 4%;
+    margin-top: 2%;
+    border-radius: 10px;
+    padding: 12px 0px 8px 14px;
+    float: right;
+    font-weight: 600;
+}
+input,textArea{
+     width: 100%;
+         color: white;
+}
+textArea {
+    font-size: 20px;
+    height: 15%;
+}
+input:hover,textarea:hover {     
+    background-color: #748faa;  
+    color: white;
+}
+
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+    color: white;
+}
+textarea:hover::-webkit-input-placeholder,input:hover::-webkit-input-placeholder {
+    color: white;
+}
+
+/* Firefox < 19 */
+textarea::-moz-placeholder, input:-moz-placeholder {
+    color: #94a7b8;
+}
+textarea:hover::-moz-placeholder,input:hover:-moz-placeholder {
+    color: white;
+}
+
+/* Firefox > 19 */
+textarea::-moz-placeholder,input::-moz-placeholder {
+    color: #94a7b8;
+}
+textarea:hover::-moz-placeholder,input:hover::-moz-placeholder {
+    color: white;
+}
+
+/* Internet Explorer 10 */
+textarea::-ms-input-placeholder,input:-ms-input-placeholder {
+    color: #94a7b8;
+}
+textarea:hover::-ms-input-placeholder,input:hover:-ms-input-placeholder {
+    color: white;
+}
+
+
+/*
+****************************************************************
+                         SECCION keyframes
+******************************************************************
+*/
+
+
+
+
+@keyframes iconosRotacion {
+    50% {
+        color: #FFC813;
+        transform: rotate3d(1, 0, 0, 180deg);
+        animation-timing-function: linear;
+    }
+}
+@keyframes imagenesRotacion {
+    100% {
+        transform: rotate(360deg);
+        animation-timing-function: linear;
+    }
+}
+@keyframes felchaMovimiento {
+    50% {
+        -ms-transform: translate(0, 50%);
+        /* IE 9 */
+        -webkit-transform: translate(0, 50%);
+        /* Safari */
+        transform: translate(0, 20%);
+    }
 }
