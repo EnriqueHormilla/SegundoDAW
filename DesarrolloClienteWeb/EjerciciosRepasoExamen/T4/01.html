@@ -3,22 +3,26 @@
 <head>
     <title>Ejercicios JavaScript</title>
 </head>
-<!-- 
+<!--
 http://ivanprego.com/desarrollo-web/tutorial-basico-de-emmet-la-evolucion-del-zen-coding/
 -->
-<body>
-<button  type="button" onclik="ejercicio01()">Ejercicio 01</button>
-<button  type="button" onclik="ejercicio02()">Ejercicio 02</button>
-<button  type="button" onclik="ejercicio03()">Ejercicio 03</button>
-<button  type="button" onclik="ejercicio04()">Ejercicio 04</button>
-<button  type="button" onclik="ejercicio05()">Ejercicio 05</button>
-<button  type="button" onclik="ejercicio06()">Ejercicio 06</button>
 
+<body>
+
+    <button onclick="ejercicio01()">Ejercicio 01</button>
+    <button onclick="ejercicio02()">Ejercicio 02</button>
+    <button onclick="ejercicio03()">Ejercicio 03</button>
+    <button onclick="ejercicio04()">Ejercicio 04</button>
+    <button onclick="ejercicio05()">Ejercicio 05</button>
+    <button onclick="ejercicio06()">Ejercicio 06</button>
+    <div id="cuerpo">
+
+    </div>
 </body>
 <script>
-    /*
-Crea un programa que pida y muestre el número de días que quedan desde hoy hasta el fin de curso (por ejemplo el 23 de junio). 
-    */
+    /* 
+                Crea un programa que pida y muestre el número de días que quedan desde hoy hasta el fin de curso (por ejemplo el 23 de junio).
+                     */
     function ejercicio01() {
         var hoy = new Date();
         var segundaFecha = new Date(2017, 5, 26, 0, 0, 0, 0);
@@ -32,119 +36,185 @@ Crea un programa que pida y muestre el número de días que quedan desde hoy has
         document.write("Faltan: " + (fechaResta / 1000) + " Segundos.");
     }
     /*
-    Crea  un  programa  que  pida  la  fecha  de  tu  cumpleaños  (no  hace  falta  introducir  el  año)  y  saque  todos  los  años  en  que  tu  cumpleaños  va  a  caer  en  domingo desde este año hasta el año 2100
+    Crea  un  programa  que  pida  la  fecha  de  tu  cumpleaños  (no  hace  falta  introducir  el  año)  y
+      saque  todos  los  años  en  que  tu  cumpleaños  va  a  caer  en  domingo desde este año hasta el año 2100
     */
-    function ejercicio02(){
-        
+    function ejercicio02() {
+        var mes = prompt("Dime el mes de tu cumple en numero");
+        var dia = prompt("Dime el dia de tu cumple");
+        var fechaCumple = new Date();
+        fechaCumple.setMonth(mes - 1);
+        fechaCumple.setDate(dia);
+        var anioActual = fechaCumple.getFullYear();
+        while (anioActual <= 2100) {
+
+            if (fechaCumple.getDay() == 0) {
+                document.write("en este anio tu cumple cae en domingo" + fechaCumple.getFullYear() + "</br>");
+            } else {
+                document.write("no es tu cumple el domingo</br>");
+            }
+            anioActual++;
+            fechaCumple.setFullYear(anioActual);
+        }
     }
     /*
     Crea  un  programa  que  pida  al  usuario  el  valor  del  radio  y  muestre  por  pantalla:radio y diametro
-    El valor de Pi debes obtenerlo del objeto Math, no introducirlo manualmente. Debes escribir al lado si son cm. o cm2 o cm3. 
+    El valor de Pi debes obtenerlo del objeto Math, no introducirlo manualmente. Debes escribir al lado si son cm. o cm2 o cm3.
     */
-    function ejercicio03(){
-        
+    function ejercicio03() {
+        var radio = prompt("dame el valor de radio ");
+        document.write("Diametro es:" + radio * 2 + "</br>");
+        document.write("Radio es:" + radio + "</br>");
+        var area = Math.PI * Math.pow(radio, 2);
+        document.write("Area es:" + area + "</br>");
     }
     /*
     Crea  un  programa  que  pida  al  usuario  un  número  entero  por  pantalla  y  muestre
-    Su valor exponencial.  
-    El numero con 4 decimales.   
-    El numero en binario.   
-    El numero en octal.  
+    Su valor exponencial.
+    El numero con 4 decimales.
+    El numero en binario.
+    El numero en octal.
     El numero en hexadecimal.
-    Utiliza para ello los métodos del objeto Number. Como datos de muestra, si metes 50, deberías obtener: 5e1 / 50.000 / 00110010 / 62 / 0x32 
+    Utiliza para ello los métodos del objeto Number. Como datos de muestra, si metes 50, deberías obtener: 5e1 / 50.000 / 00110010 / 62 / 0x32
 
     */
-        function ejercicio04(){
-        
+    function ejercicio04() {
+        var numero = prompt("Dame un numero");
+
+        document.write("El numero con 5 decimales: " + numero.toPrecision(5) + "<br>");
+        document.write("En binario: " + numero.toString(2) + "<br/>");
+        document.write("En octal: " + numero.toString(8) + "<br/>");
+        document.write("En hexadecimal: " + numero.toString(16) + "<br/>");
     }
     /*
      Crea un programa que pida al usuario su nombre y apellidos y muestre:
      El tamaño del nombre más los apellidos sin contar espacios en blanco).
-     La cadena en minúsculas y en mayúsculas. 
-     Que divida el nombre y los apellidos y los muestre en tres líneas, donde ponga Nombre: /Apellido1: /Apellido2. 
+     La cadena en minúsculas y en mayúsculas.
+     Que divida el nombre y los apellidos y los muestre en tres líneas, donde ponga Nombre: /Apellido1: /Apellido2.
      Una  propuesta  de  nombre  de  usuario,  compuesto  por  la  inicial  del  nombre, el primer apellido y la inicial del segundo apellido.
      Ejemplo, para Jesús García Pérez sería jgarciap.
      Una  propuesta  de  nombre  de  usuario  compuesto  por  las  tres  primeras  letras del nombre y de los dos apellidos, ejemplo jesgarper
     */
-        function ejercicio05(){
-        
+    function ejercicio05() {
+        var nombreCompleto = prompt("dime tu nombre y apellidos:");
+        var y = 0;
+        for (i = 0; i < nombreCompleto.length; i++) {
+            if (nombreCompleto.charAt(i) != ' ') {
+                y++;
+            }
+        }
+        document.write(nombreCompleto.toUpperCase() + "<br/>");
+        document.write(nombreCompleto.toLowerCase() + "<br/>");
+        document.write("Numero de letras de tu nombre y apellidos: " + y + "<br/>");
+        var arrayNombre = nombreCompleto.split(' ');
+        for (i = 0; i < arrayNombre.length; i++) {
+            document.write(arrayNombre[i] + "<br/>");
+        }
+
+        document.write(arrayNombre[0].charAt(0).toLowerCase() + "" + arrayNombre[1].toLowerCase());
+
+
     }
     /*
-    Crea  un  programa  que  pida  al  usuario  una  propuesta  de  contraseña  y  compruebe si cumple con los siguientes resultados: 
+    Crea  un  programa  que  pida  al  usuario  una  propuesta  de  contraseña  y  compruebe si cumple con los siguientes resultados:
     Tiene entre 8 y 12 caracteres.
     Tiene una letra mayúscula.
     Tiene una letra minúscula.
-    Tiene un número. 
-    Tiene  uno  de  los  siguientes  valores:  guión  bajo,  guión  alto,  arroba,  almohadilla, tanto por ciento o ampersand. Si  cumple  con  todos  los  requisitos  se  considera  una  contraseña  segura,  de  lo  contrario mostrará que es una contraseña no segura. 
+    Tiene un número.
+    Tiene  uno  de  los  siguientes  valores:  guión  bajo,  guión  alto,  arroba,  almohadilla, tanto por ciento o ampersand. Si  cumple  con  todos  los  requisitos  se  considera  una  contraseña  segura,  de  lo  contrario mostrará que es una contraseña no segura.
     */
-    function ejecicio06(){
+    function ejecicio06() {
+        var contrasenia=prompt("Dime una password");
+        var verifiContrasenia=0,
+            verifiContraseniaMayus=0,
+            verifiContraseniaMinus=0,
+            verifiContraseniaNumero=0;
+        String mayu ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+        String minus = "abcdefghijklmnopqrstuvwxyz"; 
+        String mumero = "123456789"; 
+        if((contrasenia.length<8)&&(contrasenia.length>12){
+           verifiContraseniaLongi=1;           
+        }
+        for(i=0;i<=contrasenia.length;i++)   {
+            if(mayu.indexOf(contrasenia.charAt[i])!=-1){
+                verifiContraseniaMayus=1;
+            }
+            if(minus.indexOf(contrasenia.charAt[i])!=-1){
+                verifiContraseniaMinus=1;
+            }
+            if(mumero.indexOf(contrasenia.charAt[i])!=-1){
+                verifiContraseniaNumero=1;
+            }
+        }
         
+           
+
     }
     /*
-    Calcula  el  número  de  años  que  han  pasado  desde  1/1/1970  hasta  el 1/1/2000.  (Utilizad  el  método Date.parse(“fecha”);  donde  la  cadena fecha debe contener la sintaxis estándar en inglés); 
+    Calcula  el  número  de  años  que  han  pasado  desde  1/1/1970  hasta  el 1/1/2000.  (Utilizad  el  método Date.parse(“fecha”);  donde  la  cadena fecha debe contener la sintaxis estándar en inglés);
     */
-    functionejercicio07(){
-        
+    function ejercicio07() {
+
     }
     /*
      La siguiente instrucción calcula un número aleatorio entre 1 y 6: Math.round(Math.random()*5)+1 Hacer  una  página  web  que  permita  hacer  una  tirada  de  dados  cuando  se pulsa un enlace.
     */
-    function ejercicio08(){
-        
+    function ejercicio08() {
+
     }
     /*img ejercicio09.png*/
-    function ejercicio09(){
-        
+    function ejercicio09() {
+
     }
     /*
     img ejercicio10.png
     */
-    function ejercicio10(){
-        
+    function ejercicio10() {
+
     }
     /*
-     Busca   en   la   cadena   definida   en   la   variable frase   el   texto   que   se corresponde con la palabra“vida”. 
+     Busca   en   la   cadena   definida   en   la   variable frase   el   texto   que   se corresponde con la palabra“vida”.
      frase="Se puede comprender la vida hacia atrás, pero vivirla siempre hacia delante."
     */
-        function ejercicio11(){
-        
+    function ejercicio11() {
+
     }
     /*
     Averigua  la  posición  de  última  vez  que  aparece la  cadena "miedo"  en  la frase.
 frase="Aquel que tiene miedo sin peligro, inventa el peligro para justificar su miedo.";
     */
-            function ejercicio12(){
-        
+    function ejercicio12() {
+
     }
     /*
     Extraer de la variable frase la subcadena que contenga los caracteres que se corresponden con los que van del 4 al 8. frase="El  sabio  no  dice  lo  que  sabe,  y  el  necio  no sabe  lo que dice."
     */
-            function ejercicio13(){
-        
+    function ejercicio13() {
+
     }
     /*
      Dada  una  variable,  la  cual  tiene  almacenada  una  frase,  obtén  de  esa variable cada palabra en función de la situación de los espacios en blanco y almacena  las  palabras  en  un  vector  denominado  "palabras".  A  partir  de entonces, muestra el cuarto elemento del vector palabras
     */
-                function ejercicio14(){
-        
+    function ejercicio14() {
+
     }
     /*
     Realiza  un  script  que  abra  una  ventana  nueva  en  la  posición  0,0  de  la pantalla  de  tamaño  200x300px.  La  nueva  ventana  debe  contener  dos botones,  uno  para  mover  la  ventana  a  la  posición  200,200  y  el  otro  para cerrarla
     */
-                function ejercicio14(){
-        
+    function ejercicio14() {
+
     }
     /*
     Realiza   un   script   que   cambie   el   color   de   fondo del   documento repetidamente cada segundo. Al cabo de 5 segundos, se ejecuta la función clearInterval() que detiene el proceso iniciado por setInterval().
     */
-                    function ejercicio15(){
-        
+    function ejercicio15() {
+
     }
     /*
-    Crea  un  script  donde  se  abran  ventanas  emergentes  (pop-up)  cada  tres segundos.  La  página  principal  deberá  contener  un  botón  que  al  pulsarlo deje de abrir ventanas emergentes y no se abran más. Funciones a utilizar: setInterval() y clearTimeout() . 
+    Crea  un  script  donde  se  abran  ventanas  emergentes  (pop-up)  cada  tres segundos.  La  página  principal  deberá  contener  un  botón  que  al  pulsarlo deje de abrir ventanas emergentes y no se abran más. Funciones a utilizar: setInterval() y clearTimeout() .
     */
-                        function ejercicio16(){
-        
+    function ejercicio16() {
+
     }
 </script>
 
