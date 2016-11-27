@@ -43,7 +43,7 @@ function addPlantasYPuertas() {
     for (i = 0; i < edificios.length; i++) {
         if (edificios[i].numero == identificador) {
             edificios[i].estructura = estructuraO;
-             document.getElementById("notificaciones").innerHTML = "informacion añadida correctamente";
+            document.getElementById("notificaciones").innerHTML = "informacion añadida correctamente";
             break;
         }
     }
@@ -65,9 +65,9 @@ function addPropietario() {
     for (i = 0; i < edificios.length; i++) {
         if (edificios[i].numero == identificador) {
             //Significa que estamos hablando de una puerta que existe
-          
+
             if ((edificios[i].estructura.nPlantas >= planta) && (edificios[i].estructura.nPuertas >= puerta)) {
-               
+
                 if (edificios[i].estructura.puertas.length > 0) {
                     for (j = 0; j < edificios[i].estructura.puertas.length; j++) {
                         //Si se cumple significa que esa puerta ya tenia propietario,lo cambiamos
