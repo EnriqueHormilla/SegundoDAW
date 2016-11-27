@@ -43,6 +43,7 @@ function addPlantasYPuertas() {
     for (i = 0; i < edificios.length; i++) {
         if (edificios[i].numero == identificador) {
             edificios[i].estructura = estructuraO;
+             document.getElementById("notificaciones").innerHTML = "informacion añadida correctamente";
             break;
         }
     }
@@ -63,49 +64,70 @@ function addPropietario() {
 
     for (i = 0; i < edificios.length; i++) {
         if (edificios[i].numero == identificador) {
-            edificios[i].estructura.puertas.push(puertaO);
-			 document.getElementById("notificaciones").innerHTML = propietario+" es ahora propietario del " + edificios[i].calle + ",Nº: " +  edificios[i].numero + ",CP: " +  edificios[i].cp;
-			break;
+            //Significa que estamos hablando de una puerta que existe
+          
+            if ((edificios[i].estructura.nPlantas >= planta) && (edificios[i].estructura.nPuertas >= puerta)) {
+               
+                if (edificios[i].estructura.puertas.length > 0) {
+                    for (j = 0; j < edificios[i].estructura.puertas.length; j++) {
+                        //Si se cumple significa que esa puerta ya tenia propietario,lo cambiamos
+                        if ((edificios[i].estructura.puertas[j].planta == planta) && (edificios[i].estructura.puertas[j].puerta == puerta)) {
+                            //Borro el anterior y add el nuevo
+                            edificios[i].estructura.puertas.splice(j, 1);
+                            edificios[i].estructura.puertas.push(puertaO);
+                            document.getElementById("notificaciones").innerHTML = propietario + " es ahora el NUEVO propietario del " + edificios[i].calle + ",Numero : " + edificios[i].numero + ",CP: " + edificios[i].cp;
+                            break;
+                        } else {
+                            edificios[i].estructura.puertas.push(puertaO);
+                            document.getElementById("notificaciones").innerHTML = propietario + " es ahora propietario del " + edificios[i].calle + ",Numero : " + edificios[i].numero + ",CP: " + edificios[i].cp;
+                            break;
+                        }
+                    }
+                } else {
+                    edificios[i].estructura.puertas.push(puertaO);
+                    document.getElementById("notificaciones").innerHTML = propietario + " es ahora propietario del " + edificios[i].calle + ",Numero : " + edificios[i].numero + ",CP: " + edificios[i].cp;
+                    break;
+                }
+            } else {
+                document.getElementById("notificaciones").innerHTML = "El edificio que me indica no tiene tantas Puertas o Plantas";
+            }
         }
     }
-	
-
-
 }
 
 
 function changeNumeroEdificio() {
-	 var identificador = document.getElementById("numeroEdificioParaModificaciones").value;
-	 var numeroNuevo = document.getElementById("numeroNuevo").value;
-	for (i = 0; i < edificios.length; i++) {
+    var identificador = document.getElementById("numeroEdificioParaModificaciones").value;
+    var numeroNuevo = document.getElementById("numeroNuevo").value;
+    for (i = 0; i < edificios.length; i++) {
         if (edificios[i].numero == identificador) {
-            edificios[i].numero=numeroNuevo;
-			 document.getElementById("notificaciones").innerHTML ="Numero cambiado";
-			break;
+            edificios[i].numero = numeroNuevo;
+            document.getElementById("notificaciones").innerHTML = "Numero cambiado";
+            break;
         }
     }
 }
 
 function changeNombreCalle() {
-	 var identificador = document.getElementById("numeroEdificioParaModificaciones").value;
-	 var calleNueva = document.getElementById("calleNueva").value;
-	for (i = 0; i < edificios.length; i++) {
+    var identificador = document.getElementById("numeroEdificioParaModificaciones").value;
+    var calleNueva = document.getElementById("calleNueva").value;
+    for (i = 0; i < edificios.length; i++) {
         if (edificios[i].numero == identificador) {
-            edificios[i].calle=calleNueva;
-			 document.getElementById("notificaciones").innerHTML ="Calle cambiada";
-			break;
+            edificios[i].calle = calleNueva;
+            document.getElementById("notificaciones").innerHTML = "Calle cambiada";
+            break;
         }
     }
 }
 
 function changeCP(cp) {
-	 var identificador = document.getElementById("numeroEdificioParaModificaciones").value;
-	 var cpNuevo = document.getElementById("cpNuevo").value;
-	for (i = 0; i < edificios.length; i++) {
+    var identificador = document.getElementById("numeroEdificioParaModificaciones").value;
+    var cpNuevo = document.getElementById("cpNuevo").value;
+    for (i = 0; i < edificios.length; i++) {
         if (edificios[i].numero == identificador) {
-            edificios[i].cp=cpNuevo;
-			 document.getElementById("notificaciones").innerHTML ="CP cambiado";
-			break;
+            edificios[i].cp = cpNuevo;
+            document.getElementById("notificaciones").innerHTML = "CP cambiado";
+            break;
         }
     }
 }
@@ -114,7 +136,7 @@ function changeCP(cp) {
 function mostrar() {
     var cadena = "";
     for (var i = 0; i < edificios.length; i++) {
-        cadena = cadena + "Construido el edificio en la calle: " + edificios[i].calle + ",Nº: " + edificios[i].numero + ",CP: " + edificios[i].cp + "<br>";
+        cadena = cadena + "Construido el edificio en la calle: " + edificios[i].calle + ",Numero o identificativo: " + edificios[i].numero + ",Codigo postal: " + edificios[i].cp + "<br>";
         cadena = cadena + "";
     }
     document.getElementById("notificaciones").innerHTML = cadena;
@@ -123,7 +145,7 @@ function mostrar() {
 function mostrarTodo() {
     var cadena = "";
     for (var i = 0; i < edificios.length; i++) {
-        cadena = cadena + "Identificativo : " + edificios[i].numero + " ,Calle :" + edificios[i].calle + " ,CP: " + edificios[i].cp + " ,nPlantas: " + edificios[i].estructura.nPlantas + " ,nPuertas: " + edificios[i].estructura.nPuertas + "<br>";
+        cadena = cadena + "***Identificativo : " + edificios[i].numero + " ,Calle :" + edificios[i].calle + " ,CP: " + edificios[i].cp + " ,nPlantas: " + edificios[i].estructura.nPlantas + " ,nPuertas: " + edificios[i].estructura.nPuertas + "***<br>";
         cadena = cadena + "Puertas con sus propietarios: <br> ";
 
         for (j = 0; j < edificios[i].estructura.puertas.length; j++) {
@@ -138,39 +160,30 @@ function mostrarTodo() {
 }
 
 function printCalle() {
- var cadena = "";
+    var identificador = document.getElementById("numeroEdificioParaLosPrint").value;
+    var cadena = "";
     for (var i = 0; i < edificios.length; i++) {
-        cadena = cadena + "Construido el edificio en la calle: " + edificios[i].calle + ",Nº: " + edificios[i].numero + ",CP: " + edificios[i].cp + "<br>";
-        cadena = cadena + "";
-    }
-    document.getElementById("notificaciones").innerHTML = cadena;
-}
-
-function printCalle() {
-	 var identificador = document.getElementById("numeroEdificioParaLosPrintv").value;
-	var cadena = "";
-    for (var i = 0; i < edificios.length; i++) {
-        cadena = cadena + "Calle--> "+edificios[i].calle + "<br>";
+        cadena = cadena + "Calle--> " + edificios[i].calle + "<br>";
         cadena = cadena + "";
     }
     document.getElementById("notificaciones").innerHTML = cadena;
 }
 
 function printCP() {
-	 var identificador = document.getElementById("numeroEdificioParaLosPrintv").value;
-	var cadena = "";
+    var identificador = document.getElementById("numeroEdificioParaLosPrint").value;
+    var cadena = "";
     for (var i = 0; i < edificios.length; i++) {
-        cadena = cadena + "CP--> "+edificios[i].cp + "<br>";
+        cadena = cadena + "CP--> " + edificios[i].cp + "<br>";
         cadena = cadena + "";
     }
     document.getElementById("notificaciones").innerHTML = cadena;
 }
 
 function printPlantas() {
-	 var identificador = document.getElementById("numeroEdificioParaLosPrintv").value;
-	var cadena = "";
+    var identificador = document.getElementById("numeroEdificioParaLosPrint").value;
+    var cadena = "";
     for (var i = 0; i < edificios.length; i++) {
-        cadena = cadena + "Calle--> "+edificios[i].estructura.nPlantas  + "<br>";
+        cadena = cadena + "Calle--> " + edificios[i].estructura.nPlantas + "<br>";
         cadena = cadena + "";
     }
     document.getElementById("notificaciones").innerHTML = cadena;

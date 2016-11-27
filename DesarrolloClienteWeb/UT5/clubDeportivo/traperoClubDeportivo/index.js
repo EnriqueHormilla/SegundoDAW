@@ -414,7 +414,7 @@ function buscarSocioBorrar() {
             } else {
                 alert("No existe un socio con esa localidad");
             }
-            
+
             document.getElementById("bNumeroMo").value = "";
             document.getElementById("bLocalidadMo").value = "";
         }
