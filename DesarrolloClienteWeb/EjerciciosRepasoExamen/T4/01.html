@@ -32,8 +32,8 @@ http://ivanprego.com/desarrollo-web/tutorial-basico-de-emmet-la-evolucion-del-ze
 </body>
 <script>
     /* 
-                                            Crea un programa que pida y muestre el número de días que quedan desde hoy hasta el fin de curso (por ejemplo el 23 de junio).
-                                                 */
+    Crea un programa que pida y muestre el número de días que quedan desde hoy hasta el fin de curso (por ejemplo el 23 de junio).
+                                                         */
     function ejer01() {
         var hoy = new Date();
         var segundaFecha = new Date(2017, 5, 26, 0, 0, 0, 0);
@@ -141,24 +141,24 @@ http://ivanprego.com/desarrollo-web/tutorial-basico-de-emmet-la-evolucion-del-ze
         var verifiContraseniaMayus = 0;
         var verifiContraseniaMinus = 0;
         var verifiContraseniaNumero = 0;
-        
+
         var mayus = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         var minus = 'abcdefghijklmnopqrstuvwxyz';
         var mumero = '123456789';
         if ((contrasenia.length < 8) && (contrasenia.length > 12)) {
-                verifiContraseniaLongi = 1;
+            verifiContraseniaLongi = 1;
+        }
+        for (i = 0; i <= contrasenia.length; i++) {
+            if (mayus.indexOf(contrasenia.charAt[i]) != -1) {
+                verifiContraseniaMayus = 1;
             }
-            for (i = 0; i <= contrasenia.length; i++) {
-                if (mayus.indexOf(contrasenia.charAt[i]) != -1) {
-                    verifiContraseniaMayus = 1;
-                }
-                if (minus.indexOf(contrasenia.charAt[i]) != -1) {
-                    verifiContraseniaMinus = 1;
-                }
-                if (mumero.indexOf(contrasenia.charAt[i]) != -1) {
-                    verifiContraseniaNumero = 1;
-                }
+            if (minus.indexOf(contrasenia.charAt[i]) != -1) {
+                verifiContraseniaMinus = 1;
             }
+            if (mumero.indexOf(contrasenia.charAt[i]) != -1) {
+                verifiContraseniaNumero = 1;
+            }
+        }
 
 
     }
@@ -166,21 +166,45 @@ http://ivanprego.com/desarrollo-web/tutorial-basico-de-emmet-la-evolucion-del-ze
     Calcula  el  número  de  años  que  han  pasado  desde  1/1/1970  hasta  el 1/1/2000.  (Utilizad  el  método Date.parse(“fecha”);  donde  la  cadena fecha debe contener la sintaxis estándar en inglés);
     */
     function ejer07() {
-        var fechaActual =Date.now();
-        var fechaDiferencia=fechaActual/1000/60/60/24/365;
-        alert(fechaDiferencia.toPrecision(2));
+        var fechaActual = Date.now();
+        var fechaDiferencia = fechaActual / 1000 / 60 / 60 / 24 / 365;
+        alert("Anios desde 1970" + fechaDiferencia.toPrecision(2));
 
 
     }
+
     /*
      La siguiente instrucción calcula un número aleatorio entre 1 y 6: Math.round(Math.random()*5)+1 Hacer  una  página  web  que  permita  hacer  una  tirada  de  dados  cuando  se pulsa un enlace.
     */
     function ejer08() {
-
+        document.write("Dado uno: " + (Math.round(Math.random() * 5) + 1) + "<br/>");
+        document.write("Dado dos: " + (Math.round(Math.random() * 5) + 1) + "<br/>");
+        document.write("Dado tres: " + (Math.round(Math.random() * 5) + 1) + "<br/>");
+        document.write("Dado cuatro: " + (Math.round(Math.random() * 5) + 1) + "<br/>");
+        document.write("Dado cinco: " + (Math.round(Math.random() * 5) + 1) + "<br/>");
     }
     /*img ejer09.png*/
     function ejer09() {
+        document.write("Opcion 1");
+        document.write("Opcion 2");
+        document.write("Opcion 3");
+        document.write("Opcion 4");
 
+        var opcion = prompt("Dime que opcion quieres: ");
+        switch (opcion) {
+        case 1:
+            alert("la opcion elegida es la 1");
+            break;
+        case 2:
+            alert("la opcion elegida es la 2");
+            break;
+        case 3:
+            alert("la opcion elegida es la 3");
+            break;
+        case 4:
+            alert("la opcion elegida es la 4");
+            break;
+        }
     }
     /*
     img ejer10.png

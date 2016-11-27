@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Club Deportivo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="index.js"></script>
+        <style>
+            table {
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center">CLUB DEPORTIVO</h1>
+        <div style="margin: 0 auto; width: 77%">
+            <table style="float: left">
+                <tr>
+                    <td>Número de socio</td>
+                    <td><input type="number" id="numSocio" required=""></td>
+                </tr>
+                <tr>
+                    <td>DNI</td>
+                    <td><input type="text" id="dni" required=""></td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" id="nombre" required=""></td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td><input type="text" id="apellidos" required=""></td>
+                </tr> 
+                <tr>
+                    <td>Fecha de nacimiento</td>
+                    <td><input type="date" id="fecha" required=""></td>
+                </tr>
+                <tr>
+                    <td>Localidad</td>
+                    <td><input type="text" id="localidad" required=""></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <input type="button" value="Alta" onclick="alta()">
+                        <input type="button" value="Mostrar" onclick="mostrar()">
+                    </td>
+                </tr>
+            </table>
+            <p>
+            <table style="float: left">
+                <tr>
+                    <td colspan="2"><input type="radio" name="valor" id="bNumero" checked onchange="selecionarBuscador()"> Buscar por número de socio </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="radio" name="valor" id="bNombreYApe" onchange="selecionarBuscador()"> Buscar por nombre y apellidos </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="radio" name="valor" id="bCategoria" onchange="selecionarBuscador()"> Buscar por categoría </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="radio" name="valor" id="bLocalidad" onchange="selecionarBuscador()"> Buscar por localidad </td>
+                </tr>
+                <tr id="buscarNumero" hidden="">
+                    <td>Número de socio <input type="number" id="bNumSocio"></td>
+                </tr>
+                <tr id="buscarNombre" hidden="">
+                    <td>Nombre <input type="text" id="bNombre"></br><br>Apellidos <input type="text" id="bApellidos"></td>
+                </tr>
+                <tr id="buscarCategoria" hidden="">
+                    <td>
+                        Categoría 
+                        <select id="categoriaSocio">
+                            <option>Infantil</option>
+                            <option>Juvenil</option>
+                            <option>Sub-22</option>
+                            <option>Adulto</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="buscarLocalidad" hidden="">
+                    <td>Localidad <input type="text" id="bLocalidadSocio"></td>
+                </tr>
+                <tr style="text-align: center">
+                    <td colspan="2"><input type="button" value="Buscar" onclick="buscarSocio()"></td>
+                </tr>
+            </table>
+            <table style="float: left">
+                <tr>
+                    <td colspan="2"><input type="radio" name="borrar" id="bDni" checked onchange="selecionarBuscadorBorrar()"> Borrar por DNI</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="radio" name="borrar" id="bNumSocioB" onchange="selecionarBuscadorBorrar()"> Borrar por Numero de socio </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="radio" name="borrar" id="bLocalidadM" onchange="selecionarBuscadorBorrar()"> Modificar localidad </td>
+                </tr>
+                <tr id="buscarDni" hidden="">
+                    <td>DNI <input type="text" id="bDniB"></td>
+                </tr>
+                <tr id="buscarNumSocio" hidden="">
+                    <td>Número Socio <input type="number" id="bNumeroB"></td>
+                </tr>
+                <tr id="buscarLocalidadM" hidden="">
+                    <td>Número Socio <input type="number" id="bNumeroMo"><br><br>Localidad <input type="text" id="bLocalidadMo"></td>
+                </tr>
+                <tr style="text-align: center">
+                    <td colspan="2"><input type="button" value="Borrar o Modificar" onclick="buscarSocioBorrar()"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
