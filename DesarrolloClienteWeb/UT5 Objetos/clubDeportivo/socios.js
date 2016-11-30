@@ -13,6 +13,14 @@ function Socio(nSocioV, dniV, nombreV, apellidoV, nacimientoV, localidadV) {
     };
 }
 
+var socioDos=new Socio(1,1,"Enrique",1,"1995","Logroño");
+clubDeportivo.push(socioDos);
+var socioTres=socioDos;
+
+clubDeportivo.push(socioTres);
+socioTres.setLocalidad("Alberite");
+
+
 function addSocio() {
     var nSocio = document.getElementById("nSocio").value;
     var dni = document.getElementById("dni").value;
@@ -33,6 +41,7 @@ function addSocio() {
     cadena += "<th>Apellido</th>";
     cadena += "<th>Nacimiento</th>";
     cadena += "<th>Localidad</th>";
+    cadena += "<th>Categoria</th>";
     cadena += "</tr>";
 
     cadena += "<tr>";
@@ -42,6 +51,7 @@ function addSocio() {
     cadena += "<td>" + apellido + "</td>";
     cadena += "<td>" + nacimiento + "</td>";
     cadena += "<td>" + localidad + "</td>";
+    cadena += "<td>" + calculaCategoria(nacimiento) + "</td>";
     cadena += "</tr>";
 
     cadena += "</table>"
@@ -71,6 +81,7 @@ function mostarSocios() {
     cadena += "<th>Apellido</th>";
     cadena += "<th>Nacimiento</th>";
     cadena += "<th>Localidad</th>";
+    cadena += "<th>Categoria</th>";
     cadena += "</tr>";
     for (i = 0; i < clubDeportivo.length; i++) {
         cadena += "<tr>";
@@ -80,6 +91,7 @@ function mostarSocios() {
         cadena += "<td>" + clubDeportivo[i].apellido + "</td>";
         cadena += "<td>" + clubDeportivo[i].nacimiento + "</td>";
         cadena += "<td>" + clubDeportivo[i].localidad + "</td>";
+        cadena += "<td>" + calculaCategoria(clubDeportivo[i].nacimiento) + "</td>";
         cadena += "</tr>";
     }
     cadena += "</table>"
@@ -93,6 +105,7 @@ function modificarLocalidad() {
     for (i = 0; i < clubDeportivo.length; i++) {
         if (clubDeportivo[i].nSocio == numeroSocio) {
             clubDeportivo[i].setLocalidad(localidad);
+            alert(clubDeportivo[i].localidad());
             break;
         }
     }
@@ -151,8 +164,7 @@ function altaAreaTrabajo() {
     cadena += "<label >Numero de DNI</label><input id='dni' type='text' /><br>";
     cadena += " <label >Nombre de socio</label><input id='nombre' type='text' /><br>";
     cadena += "<label >Apellido de socio</label><input id='apellido' type='text' /><br>";
-    cadena += " <label >Apellido de socio</label><input id='apellido' type='text' /><br>";
-    cadena += "<label >Nacimiento de socio</label><input id='nacimiento' type='date' /><br>";
+    cadena += "<label >Nacimiento de socio(SOLO Añio)</label><input id='nacimiento' type='number' /><br>";
     cadena += "<label >Localidad del socio</label><input id='localidad' type='text' /><br>";
     cadena += "<input type='button' value='Alta' onclick='addSocio()'>";
 
