@@ -1,7 +1,13 @@
 html {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
+li {
+font-size: 15px;
+   
+}
+.textoCenter{
+    text-align: center;
+}
 .flexContenedor {
     min-height: 103%;
     min-width: 100%;
@@ -69,8 +75,9 @@ ICONOS    http://fontawesome.io/icons/
 }
 
 .nadvar >a:hover {
-   color:  #FFC813;
+    color: #FFC813;
 }
+
 
 /*
 ****************************************************************
@@ -117,8 +124,6 @@ ICONOS    http://fontawesome.io/icons/
 }
 
 #flecha:hover {}
-
-
 
 #myVideo {
     position: absolute;
@@ -219,8 +224,6 @@ ICONOS    http://fontawesome.io/icons/
     animation: iconosRotacion 1s 1;
 }
 
-
-
 .articulo22 {}
 
 .articulo23 {}
@@ -261,6 +264,9 @@ ICONOS    http://fontawesome.io/icons/
     z-index: 1;
 }
 
+
+
+
 .oDerecha {
     text-align: left;
     float: right;
@@ -277,7 +283,14 @@ ICONOS    http://fontawesome.io/icons/
     width: 40%;
     padding: 1%;
 }
-
+.listaTrabajo{
+    list-style: none;
+   
+}
+.listaTrabajo>li{
+  
+    font-size: 15px;
+}
 .redondearImg {
     position: inline;
     border: 5px solid white;
@@ -310,8 +323,6 @@ hr.v {
 }
 
 
-
-
 /*
 ****************************************************************
                          SECCION CUATRO   
@@ -331,9 +342,11 @@ hr.v {
     padding: 10 0 10 0;
     min-width: 100%;
 }
+
 .seccionCuatro >a {
- text-decoration: none;
+    text-decoration: none;
 }
+
 .seccionCuatro >a> article {
     margin: 0 100 0 0;
     text-align: center;
@@ -357,6 +370,7 @@ hr.v {
     background-color: #FFC813;
 }
 
+
 /*
 ****************************************************************
                          SECCION CONTACTO   
@@ -373,35 +387,35 @@ hr.v {
     justify-content: center;
     align-content: stretch;
     align-items: stretch;
-        max-height: 100%;
+    max-height: 100%;
     min-height: 90%;
     min-width: 100%;
     margin: -8px;
 }
 
 .seccionCinto > h1 {
-    
     text-align: center;
     width: 100%;
     line-height: 1.1;
     text-transform: uppercase;
     font-weight: 700;
     font: normal 50px/1 "Lobster", Helvetica, sans-serif !important;
-    
 }
 
 .seccionCinto > article {
-margin: 0 auto;
+    margin: 0 auto;
     width: 65%;
 }
-fieldset {   
-    border-style: none ;
+
+fieldset {
+    border-style: none;
 }
-input, textarea {
-    
+
+input,
+textarea {
     text-transform: uppercase;
     font-size: 1em;
-    background: #60768d;       
+    background: #9da5af;
     min-height: 7%;
     margin-left: 4%;
     margin-top: 2%;
@@ -410,47 +424,70 @@ input, textarea {
     float: right;
     font-weight: 600;
 }
-input,textArea{
-     width: 100%;
-         color: white;
+
+input,
+textArea {
+    width: 100%;
+    color: white;
 }
+
 textArea {
     font-size: 20px;
     height: 15%;
 }
-input:hover,textarea:hover {     
-    background-color: #748faa;  
+
+input:hover,
+textarea:hover {
+    background-color: #899098;
     color: white;
 }
 
-textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
     color: white;
 }
-textarea:hover::-webkit-input-placeholder,input:hover::-webkit-input-placeholder {
+
+textarea:hover::-webkit-input-placeholder,
+input:hover::-webkit-input-placeholder {
     color: white;
 }
+
 
 /* Firefox < 19 */
-textarea::-moz-placeholder, input:-moz-placeholder {
-    color: #94a7b8;
+
+textarea::-moz-placeholder,
+input:-moz-placeholder {
+    color: #80868e;
 }
-textarea:hover::-moz-placeholder,input:hover:-moz-placeholder {
+
+textarea:hover::-moz-placeholder,
+input:hover:-moz-placeholder {
     color: white;
 }
+
 
 /* Firefox > 19 */
-textarea::-moz-placeholder,input::-moz-placeholder {
-    color: #94a7b8;
+
+textarea::-moz-placeholder,
+input::-moz-placeholder {
+    color: #80868e;
 }
-textarea:hover::-moz-placeholder,input:hover::-moz-placeholder {
+
+textarea:hover::-moz-placeholder,
+input:hover::-moz-placeholder {
     color: white;
 }
 
+
 /* Internet Explorer 10 */
-textarea::-ms-input-placeholder,input:-ms-input-placeholder {
-    color: #94a7b8;
+
+textarea::-ms-input-placeholder,
+input:-ms-input-placeholder {
+    color: #80868e;
 }
-textarea:hover::-ms-input-placeholder,input:hover:-ms-input-placeholder {
+
+textarea:hover::-ms-input-placeholder,
+input:hover:-ms-input-placeholder {
     color: white;
 }
 
@@ -461,9 +498,6 @@ textarea:hover::-ms-input-placeholder,input:hover:-ms-input-placeholder {
 ******************************************************************
 */
 
-
-
-
 @keyframes iconosRotacion {
     50% {
         color: #FFC813;
@@ -471,12 +505,14 @@ textarea:hover::-ms-input-placeholder,input:hover:-ms-input-placeholder {
         animation-timing-function: linear;
     }
 }
+
 @keyframes imagenesRotacion {
     100% {
         transform: rotate(360deg);
         animation-timing-function: linear;
     }
 }
+
 @keyframes felchaMovimiento {
     50% {
         -ms-transform: translate(0, 50%);
