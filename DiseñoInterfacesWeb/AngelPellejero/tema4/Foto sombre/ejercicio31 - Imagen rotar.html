@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejercicio 31: Imagen rotar</title>
+	<style>	
+
+		.foto {
+			position: relative;
+			margin: 20px auto;
+			border:1px solid #ccc;
+			padding: 10px;
+			background-color: rey;
+			width: 600px;
+			height: 301px;
+			background:#eee;
+		}
+		
+		.foto:before, .foto:after {
+			content:"";/* contenido vacio*/
+			z-index:-1;
+			left: 10px;
+			bottom: 15px;
+			position: absolute;
+			width: 50%;
+			max-width:600px;
+			height: 20%;
+			/* la sombra*/
+			-webkit-box-shadow: 0 15px 10px rgba(0,0,0, .8);
+			-moz-box-shadow: 0 15px 10px rgba(0,0,0, .8);
+			box-shadow: 0 15px 10px rgba(0,0,0, .8);
+			/*la rotacion */
+			-webkit-transform: rotate(-3deg);
+			-moz-transform: rotate(-3deg);
+			-o-transform: rotate(-3deg);
+			transform: rotate(-3deg);
+		}
+		
+		.foto:after {
+			right: 15px;
+			left: auto;
+			/*la rotacion */
+			-webkit-transform: rotate(3deg);
+			-moz-transform: rotate(3deg);
+			-o-transform: rotate(3deg);
+			transform: rotate(3deg);
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+
+	<article class="foto">
+		<img src="imagenes/puentePiedra.png" alt="Puente de piedra">
+	</article>
+
+</body>
+</html>

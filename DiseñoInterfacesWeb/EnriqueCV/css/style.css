@@ -1,13 +1,15 @@
 html {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 li {
-font-size: 15px;
-   
+    font-size: 15px;
 }
-.textoCenter{
+
+.textoCenter {
     text-align: center;
 }
+
 .flexContenedor {
     min-height: 103%;
     min-width: 100%;
@@ -35,7 +37,7 @@ ICONOS    http://fontawesome.io/icons/
 
 /*Nadvar  y NadvarSection*/
 
-.nadvar {
+nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -50,8 +52,43 @@ ICONOS    http://fontawesome.io/icons/
     z-index: 1000;
 }
 
-.nadvar> * {
+nav> * {
     font-size: 25px
+}
+
+nav > ul>i {
+    position: absolute;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    margin-top: -15;
+    margin-right: 20;
+    margin-bottom: 200px;
+}
+
+nav >ul> li {
+    display: none;
+}
+
+nav >ul:hover > li {
+    display: block;
+    list-style: none;
+    text-align: right;
+    padding-right: 20px;
+    color: white;
+    height: 35px;
+    margin-right: 5px;
+    padding-top: 20px;
+}
+
+nav >ul> li>a {
+    text-decoration: none;
+    color: white;
+    font: normal 40px/1 "Lobster", Helvetica, sans-serif !important;
+}
+
+nav >ul> li:hover>a {
+    color: #c7a122;
 }
 
 .logo {
@@ -66,7 +103,7 @@ ICONOS    http://fontawesome.io/icons/
     animation: iconosRotacion 1s 1;
 }
 
-.nadvar >a {
+nav >a {
     height: 100%;
     color: white;
     text-align: center;
@@ -74,7 +111,7 @@ ICONOS    http://fontawesome.io/icons/
     text-decoration: none;
 }
 
-.nadvar >a:hover {
+nav >a:hover {
     color: #FFC813;
 }
 
@@ -264,9 +301,6 @@ ICONOS    http://fontawesome.io/icons/
     z-index: 1;
 }
 
-
-
-
 .oDerecha {
     text-align: left;
     float: right;
@@ -283,14 +317,15 @@ ICONOS    http://fontawesome.io/icons/
     width: 40%;
     padding: 1%;
 }
-.listaTrabajo{
+
+.listaTrabajo {
     list-style: none;
-   
 }
-.listaTrabajo>li{
-  
+
+.listaTrabajo>li {
     font-size: 15px;
 }
+
 .redondearImg {
     position: inline;
     border: 5px solid white;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejercicio 35 Acordeon</title>
+	<style>
+		#acordeon {
+			font-family:Verdana, Geneva, sans-serif;
+			font-size: .8em;
+			width:500px;
+			margin:10px auto;
+			border: 1px solid #333;
+			padding: 5px;
+			background-color: lightsteelblue;
+		}
+
+		h3 {
+			margin: 0;
+			padding: 5px;
+			background-color: #eee;
+		}
+		
+		h3 a {
+			color: grey;
+			text-decoration:none; 
+		}
+		
+		#acordeon.section { 
+			background-color: white; 
+			border-bottom: 1px solid #333; 
+		}
+		
+		p.zonaVisualizacion {
+			margin: 0;
+			padding: 3px;
+		}
+		
+		#acordeon h3 + div {
+			height: 0;
+			overflow: hidden;
+			-webkit-transition: height 0.3s ease-in;
+			-o-transition: height 0.3s ease-in;
+			-moz-transition: height 0.3s ease-in;
+			transition: height 0.3s ease-in;
+		}
+		
+		#acordeon :target h3 + div {
+			height: 150px;
+			overflow: auto;
+		}
+		
+	
+	</style>
+</head>
+
+<body>
+
+    <div id="acordeon">
+		<div id="parrafo1" class="section">
+			<h3><a href="#parrafo1">En un lugar de la Mancha</a></h3>
+			<div>
+				<p class="zonaVisualizacion">En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los
+				de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. </p>
+			</div>
+		</div>
+		<div id="parrafo2" class="section">
+			<h3><a href="#parrafo2">Es, pués de , de saber que este sobre dicho hidalgo</a></h3>
+			<div>
+				<p class="zonaVisualizacion">Es, pues, de saber, que este sobredicho hidalgo, los ratos que estaba ocioso (que eran los más del año) se daba
+				a leer libros de caballerías con tanta afición y gusto, que olvidó casi de todo punto el ejercicio de la caza, y 
+				aun la administración de su hacienda; y llegó a tanto su curiosidad y desatino en esto, que vendió muchas hanegas
+				de tierra de sembradura, para comprar libros de caballerías en que leer; y así llevó a su casa todos cuantos pudo
+				haber dellos; y de todos ningunos le parecían tan bien como los que compuso el famoso Feliciano de Silva</p>
+			</div>
+		</div>
+		<div id="parrafo3" class="section">
+			<h3><a href="#parrafo3">Con estas razones perdía el pobre caballero el juicio</a></h3>
+			<div>
+				<p class="zonaVisualizacion">Con estas razones perdía el pobre caballero el juicio, y desvelábase por entenderlas y desentrañarles el
+				sentido, que no se lo sacara ni las entendiera el mesmo Aristóteles, si resucitara para sólo ello. No estaba muy bien
+				con las heridas que don Belianís daba y recebía, porque se imaginaba que, por grandes maestros que le hubiesen curado, no 
+				dejaría de tener el rostro y todo el cuerpo lleno de cicatrices y señales. </p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

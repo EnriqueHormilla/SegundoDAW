@@ -1,0 +1,92 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            body{
+                perspective: 800px;
+            }
+            #rubik{
+                position: relative;
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                margin-top: 15%;
+                transform-style: preserve-3d;
+                animation: myfunction 5s linear infinite;
+                animation-direction: alternate;
+            }
+            @keyframes myfunction{
+                from{
+                    transform: rotateY(0deg) rotateX(0deg) ;
+                }
+                to{
+                    transform: rotateY(720deg) rotateX(360deg) ;
+                }
+
+            }
+            #rubik div{
+                transition: transform 1s linear;
+            }
+            #rubik:hover .cara1{
+                transform: translateZ(-200px);
+            }
+            #rubik:hover .cara2{
+                transform: translateX(200px) rotateY(90deg);
+            }
+            #rubik:hover .cara3{
+                transform: translateX(-200px) rotateY(-90deg);
+            }
+            #rubik:hover .cara4{
+                transform: translateY(-200px) rotateX(90deg);
+            }
+            #rubik:hover .cara5{
+                transform: translateY(200px) rotateX(-90deg);
+            }
+            #rubik:hover .cara6{
+                transform: translateZ(200px);
+            }
+            #rubik div{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+            }
+            .cara1{
+                transform: translateZ(-100px);
+                background: red;
+            }
+            .cara2{
+                transform: translateX(100px) rotateY(90deg);/*esta en el centro el origen*/
+                background: blue;
+            }
+            .cara3{
+                transform: translateX(-100px) rotateY(-90deg);
+                background: yellow;
+            }
+            .cara4{
+                transform: translateY(-100px) rotateX(90deg);
+                background: black;
+            }
+            .cara5{
+                transform: translateY(100px) rotateX(-90deg);
+                background: green;
+            }
+            .cara6{
+                transform: translateZ(100px);
+                background: orange;
+            }
+        </style>
+        <div id="rubik">
+            <div class="cara1"></div>
+            <div class="cara2"></div>
+            <div class="cara3"></div>
+            <div class="cara4"></div>
+            <div class="cara5"></div>
+            <div class="cara6"></div>
+        </div>
+    </body>
+</html>

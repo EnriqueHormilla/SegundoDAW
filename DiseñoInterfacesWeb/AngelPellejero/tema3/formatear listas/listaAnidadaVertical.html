@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            nav {
+                width:500px; /*Le establecemos un ancho*/
+                margin:0 auto; /*Centramos automaticamente*/
+                padding: 0;
+                border: 1px solid #7C7C7C;
+            }
+            li{
+                list-style: none; /*Importante quitar el estilo a lista*/
+            }
+            li> ul> li{ /*Le damos un estilo a lo que se despliega*/
+                margin-left: 30%;
+                border-bottom: 1px solid #7C7C7C;
+                border-top: 1px solid #FFF;
+                background: #F4F4F4;
+            }
+
+            ul li:hover { /*Cambiamos el color al pasar por los li con el raton*/
+                background: #555;
+            }
+            ul li:hover ul {/*este hover entrar en funcionamiento al pasar por el primer li*/
+                display: block; /*Display block hace que se estienda hacia la derecha en forma de bloque lo que contiene el ul*/
+            }
+
+            ul li ul li:hover {background: #666;}
+            ul li ul { 
+                position: absolute;
+                width: 200px;
+                display: none;/*Display none oculta los objetos siguietnes en este caso los ultimos li*/
+            }
+        </style>
+        <nav>
+            <ul>
+                <li>
+                     Primer plato
+                    <ul>
+                        <li>Macarrones</li>
+                        <li>Gazpacho</li>
+                        <li> Judías pintas</li>
+                    </ul>
+                </li>
+                <li>
+                    Segundo plato
+                    <ul>
+                        <li>Pollo al ajillo</li>
+                        <li>  Merluza frita</li>
+                    </ul>
+                </li>
+                <li>
+                     Postre
+                    <ul>
+                        <li> Fruta</li>
+                        <li> Yogur</li>
+                        <li> Café</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>

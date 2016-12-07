@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulario</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    </head>
+    <body>
+        <style>
+            #login {/*sombreado de 2 sombras*/
+                    position: absolute;
+                    margin-left: 33%;
+                    z-index: 0;
+                    height: 240px;
+                    width: 400px;
+                    padding: 30px;
+                    box-shadow:
+                        0 0 2px rgba(0, 0, 0, 0.2),
+                        0 1px 1px rgba(0, 0, 0, .2),
+                        0 3px 0 #fff,
+                        0 4px 0 rgba(0, 0, 0, .2),
+                        0 6px 0 #fff,
+                        0 7px 0 rgba(0, 0, 0, .2);                   
+            }
+            #login:before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                border: 1px dashed #ccc;
+                top: 5px;
+                bottom: 5px;
+                left: 5px;
+                right: 5px;
+                box-shadow: 0 0 0 1px #fff;
+            }
+            h1 {
+                text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0
+                    rgba(0, 0, 0, .5);
+                text-transform: uppercase;
+                text-align: center;
+                color: #666;
+                margin: 0 0 30px 0;
+                letter-spacing: 4px;
+                font: normal 26px/1 Verdana, Helvetica;
+                position: relative;
+            }
+            h1:after, h1:before {
+                background-color: #777;
+                content: "";
+                height: 1px;
+                position: absolute;
+                top: 15px;
+                width: 120px;
+            }
+            h1:after {
+                background-image: linear-gradient(left, #777, #fff);
+                right: 0;
+            }
+            h1:before {
+                background-image: linear-gradient(right, #777, #fff);
+                left: 0;
+            }
+            fieldset {
+                border: 0;
+                padding: 0;
+                margin: 0;
+            }
+            #inputs input {
+                padding: 15px 15px 15px 30px;
+                margin: 0 0 10px 0;
+                width: 353px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+            }
+            #inputs input:focus {
+                background-color: #fff;
+                border-color: orange;
+                outline: none;
+            }
+            #actions {
+                margin-top: 25px;
+            }
+            #submit {
+                border-width: 1px;
+                border-style: solid;
+                float: left;
+                height: 35px;
+                padding: 0;
+                width: 120px;
+                cursor: pointer;
+                color: #8f5a0a;
+                background-color: #ffb94b;
+                border-radius: 3px;
+
+            }
+            #submit:hover,#submit:focus {
+                background-color: #fddb6f;
+            }
+            
+            #actions a {
+                color: blue;
+                float: right;
+                line-height: 35px;
+                margin-left: 10px;
+            }
+        </style>
+        <div id="wrapper"><!-- #wrapper -->
+
+
+            <form id="login">
+                <h1>Log In</h1>
+                <fieldset id="inputs">
+                    <input id="username" type="text" placeholder="Username" autofocus required>   
+                    <input id="password" type="password" placeholder="Password" required>
+                </fieldset>
+                <fieldset id="actions">
+                    <input type="submit" id="submit" value="Log in">
+                    <a href="">Forgot your password?</a><a href="">Register</a>
+                </fieldset>
+            </form>
+
+        </div><!-- #wrapper -->
+    </body>
+</html>

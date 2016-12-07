@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            #modal{
+                position: fixed;
+                width: 300px;
+                height: 300px;
+                top: 10%;
+                left: 30%;
+                opacity: 0;
+                background: grey;
+                pointer-events: none;
+            }
+            #modal:target{
+                opacity: 1;
+                pointer-events: auto;
+            }
+        </style>
+        <article>
+            <a href="#modal"> abrir Ventana</a>
+            <div id="modal">
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nihil id commodi ipsa vitae dolore molestiae minus enim. 
+                    Nulla ut recusandae nemo quam autem minus totam impedit, quod accusamus optio?</p>
+            </div>
+            <a href="#cerar" title="cerrar" class="cerrar">X</a>
+        </article>
+    </body>
+</html>

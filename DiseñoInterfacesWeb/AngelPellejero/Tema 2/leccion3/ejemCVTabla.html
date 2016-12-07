@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Rellena tu CV</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form enctype="multipart/form-data" action="" method="POST">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre: </label>
+                <label for="apellidos">Apellidos:</label> 
+                <label for="foto">Tu foto</label> </br> 
+                <input type="text" name="nombre" value="" />
+                <input type="text" name="apellidos" value=""  size="40"/>
+                <input type="file" name="uploadedfile"/></br>
+                <label for="dni">DNI: </label></br>
+                <input type="text" name="dni" value="" maxlength="9"/></br>
+                <label for="correo">Correo: </label></br>
+                <input type="email" name="correo" value=""/></br>
+                <label for="telefono">Telefono:</label> </br>
+                <input type="number" name="telefono" value="" max="999999999"/></br>
+                <label for="nacimiento">Fecha de nacimiento: </label> </br>
+                <input type="date" name="nacimiento" value="" /></br>
+            </fieldset> 
+            <fieldset> 
+                <legend>Formacion Academica: </legend>
+                <textarea name="formacion" rows="5" cols="185"> </textarea>
+            </fieldset> 
+            <fieldset> 
+                <legend>Experiencia Laboral: </legend>
+                <textarea name="formacion" rows="5" cols="185"> </textarea>
+            </fieldset> 
+            <fieldset> 
+                <legend>Idiomas: </legend>
+                <label for="idioma1">Idioma1: </label>
+                <label for="hablado">Hablado </label>
+                <label for="leido">Leido </label>
+                <label for="escrito">Escrito </label>
+                <label for="escuchado">Escuchado </label> </br>
+                <input type="text" name="idioma1" value=""  size="20"/>
+                <input list="hablado1" name="hablado1"> 
+                <datalist id="hablado1">   
+                    <option value="B1">   
+                    <option value="B2">   
+                    <option value="C1">   
+                    <option value="C2">
+                </datalist>
+                <input list="leido1" name="leido1"> 
+                <datalist id="leido1">   
+                    <option value="B1">   
+                    <option value="B2">   
+                    <option value="C1">   
+                    <option value="C2">
+                </datalist>
+                <input list="escrito1" name="escrito1"> 
+                <datalist id="escrito1">   
+                    <option value="B1">   
+                    <option value="B2">   
+                    <option value="C1">   
+                    <option value="C2">
+                </datalist>
+                <input list="escuchado1" name="escuchado1"> 
+                <datalist id="escuchado1">   
+                    <option value="B1">   
+                    <option value="B2">   
+                    <option value="C1">   
+                    <option value="C2">
+                </datalist>
+            </fieldset> 
+            <fieldset> 
+                <legend>Otros datos de interes: </legend>
+                <label for="conducir">Carnet de conducir y coche propio?</label></br>
+                <input type="radio" name="vehicle" value="sicoche">Si</br>
+                <input type="radio" name="vehicle" value="nocoche">No</br>
+            </fieldset> 
+        </form>
+    </body>
+</html>

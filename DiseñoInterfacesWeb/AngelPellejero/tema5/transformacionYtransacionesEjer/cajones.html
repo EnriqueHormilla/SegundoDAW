@@ -1,0 +1,95 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            body{
+                font: .8em  Vendana Arial, Helvetica, sans-seri;
+            }
+            ul{
+                list-style: none;
+            }
+            section{
+                width: 100px;
+                padding: 20px;
+                border: 1px #333;
+                background-color: #ccc;
+            }
+            section ul{
+                margin: 0;
+                padding: 0;
+            }
+            section ul li{
+                width: 70px;
+                height: 20px;
+                margin: 0 0 30px 0;
+            }
+            section ul li:last-child{/*El ultimo de la lista*/
+                margin: 0;
+            }
+            section ul li a{
+                z-index: 100;
+                display: block;
+                position: absolute;
+                color: black;
+                text-decoration: none;
+            }
+            section ul li article{
+                position: absolute;
+                left: 0;
+                top: 0;
+                overflow: hidden;
+                opacity: 0;
+                width: 100px;
+                transition: all 1s ease-in;
+            }
+            section ul li:hover article{
+                left: 90px;    
+                opacity: 1;
+            }
+            p{
+                width: 300px;
+            }
+        </style>
+        <section>
+            <ul>
+                <li>
+                    <a href="">Manzanas</a>
+                    <article>
+                        <h3>Las manzanas</h3>
+                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis 
+                            lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    </article>
+                </li>
+                <li>
+                    <a href="">Peras</a>
+                    <article>
+                        <h3>Las peras</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna.</p> 
+                    </article>
+                </li>
+                <li>
+                    <a href="">PLatanos</a>
+                    <article>
+                        <h3>Los Platanos</h3>
+                        <p>Sed posuere consectetur est at lobortis. Donec 
+                            ullamcorper nulla non metus auctor fringilla.</p> 
+                    </article>
+                </li>
+                <li>
+                    <a href="">Fresas</a>
+                    <article>
+                        <h3>Las fresas</h3>
+                        <p>Donec id elit non mi porta gravida at eget metus. Morbi leo risus, 
+                            porta ac consectetur ac, vestibulum at eros.</p> 
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>

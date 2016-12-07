@@ -1,0 +1,54 @@
+body{
+    background-color: #30343C;
+}
+header{
+    position: relative;
+    width: 98%;
+    height: auto;
+    padding: 1%;
+    background-color: #234182;
+}
+section{
+    position: relative;
+    width: 80%;
+    height: auto; /* Asi el espacio se adapta a la imagen y al texto*/
+    background-color: white;
+    margin-top: 5px;
+    margin-right: 1%;
+    padding: 1%; /* Margen interior de la caja para los divs */
+    float:left;
+}
+aside{
+    position: relative;
+    width: 15%;
+    height: auto;
+    background-color: #AB9E9E;
+    margin-top: 5px;
+    min-width: 200px; /* para que tenega un minimo de espacio y si no que salte abajo */
+    padding: 1%;
+    float:left;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    float:left;
+}
+article{
+    position: relative;
+    width: 100%;
+    float:left;
+    margin-top: 10px;
+    background-color: white;
+    margin-right: 1%;
+}
+h1{
+    color: orange;
+    text-align: center; 
+}
+img{
+    width: 100%;
+}

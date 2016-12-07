@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            #a1{
+                transform-origin: left top;/*esfecto chincheta*/
+                transform: rotate(32deg)  translate(500px, 50px);
+            }
+            #a2{/*escala horizontal y, el segundo, al cambio de escala vertical*/
+                transform: scale(.5, .2);
+            }
+            #a3{/*estirar en x e y la imagen*/
+                transform-origin: left top;
+                transform: skew(20deg, 20deg);
+            }
+            p.texto {
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                line-height: 30px;
+            }
+            #multiple {
+                position: absolute;
+                left: 20px;
+                width: 200px;
+                height:60px;
+                background-color: darkblue;
+                /*transition: width 3s linear (ancho duraccion tipo de desplazamiento), 
+                height 2s linear 3s (altura duraccion tipo de desplazamiento, espera ante de ejecutarse),
+                opacity 4s linear 6s (aclarado duraccion tipo de desplazamiento, espera ante de ejecutarse)*/
+                transition: width 4s linear, height 4s linear, opacity 4s
+                    linear;
+            }
+            #multiple:hover {
+                width: 400px;
+                height: 120px;
+                opacity: .3;
+            }
+            #prueba{
+                position: absolute;
+                background-color: blue;
+                width: 300px;
+                height: 50px; 
+                left: 50px;
+                top: 50%;
+            }
+            
+            #prueba:hover{
+                transform: rotate(3600deg);
+                transition: ease-in-out 10s;
+            }
+        </style>
+        <div id="a1">
+            <img src="f1.jpg">
+        </div>
+        <div id="a2">
+            <img src="f2.jpg">
+        </div>
+        <div id="a3">
+            <img src="f3.jpg">
+        </div>
+        <div id="multiple">
+            <p class="texto">En un lugar de la Mancha…</p>
+        </div>
+         <div id="prueba">
+            <p class="texto">Molino</p>
+        </div>
+    </body>
+</html>

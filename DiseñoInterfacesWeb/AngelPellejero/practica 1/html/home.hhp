@@ -1,0 +1,21 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Title=home
+Compiled file=home.chm
+Contents file=Table of Contents.hhc
+Default topic=Home.html
+Display compile progress=No
+Language=0x409 English (United States)
+
+
+[FILES]
+Help_RP.html
+Resources/images.html
+Resources/other.html
+Resources/reload.html
+Resources/ann.html
+Home.html
+Ropa.html
+Productos.html
+Notes_chm.html
+[INFOTYPES]

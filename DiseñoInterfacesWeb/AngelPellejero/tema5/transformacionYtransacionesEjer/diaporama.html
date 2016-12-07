@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            section{
+                width: 230px;
+            }
+            figure{
+                position: relative;
+                float: left;
+                margin-bottom: 30px;
+                margin-top: 30px;
+                transform: scale(0.5);
+                height: 90px;
+                width: 90px;
+                transition: all 1s linear; /* all indica que lea todas las reglas del hover*/
+            }
+            img{
+                width: 225px;
+                height: 225px;
+            }
+            figcaption{
+                font:3em Verdana;
+            }
+            
+            figure:hover{
+                transform: scale(1);
+                left: 150px;
+            }
+
+
+        </style>
+        <section>
+            <section>
+                <figure class="a" ><img src="img/sol.jpg"><figcaption>Sol</figcaption></figure>
+                <figure class="a"><img src="img/tierra.jpg"><figcaption>Tierra</figcaption></figure>
+                <figure class="a"><img src="img/galaxia.jpg"><figcaption>Galaxia</figcaption></figure>
+                <figure class="a"><img src="img/agujero.jpg"><figcaption>Evolucion</figcaption></figure>
+            </section>
+        </section>
+    </body>
+</html>

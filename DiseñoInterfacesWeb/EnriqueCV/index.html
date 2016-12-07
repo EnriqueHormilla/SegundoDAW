@@ -1,35 +1,28 @@
 <html>
 
 <head>
-    <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
     <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
     <title>Enrique Hormilla CV</title>
-    <!--
-    http://flexboxin5.com/
-    
-    
-    Tiene que tener un 
-    formulario una tabla , NOK
-    animacion 2d,efectos,sobras OK
-    -->
+
 </head>
 
 <body>
-    <header class="fondoAzulOscuro">
+    <header></header>
+    <nav>
 
-    </header>
-    <nav class="fondoAzulOscuro">
-        <div class="nadvar">
-            <a href="index.html#" title="Conocimientos"><span class="logo">Enrique Hormilla</span></a>
-            <a href="#Conocimientos" title="Conocimientos">Estudios</a>
-            <a href="#CV" title="Conocimientos">Curriculum Vitae</a>
-            <a href="#Contacto" title="Contacto">Redes Sociales</a>
-            <a href="contacto.html" title="Contacto">Contacto</a>
+        <a href="index.html#" title="Conocimientos"><span class="logo">Enrique Hormilla</span></a>
+        <ul>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <li> <a href="#Conocimientos" title="Conocimientos">Estudios</a></li>
+            <li><a href="#CV" title="Conocimientos">Curriculum Vitae</a></li>
+            <li><a href="#Contacto" title="Contacto">Redes Sociales</a></li>
+            <li><a href="contacto.html" title="Contacto">Contacto</a></li>
 
-        </div>
+        </ul>
     </nav>
     <!--
 ****************************************************************
@@ -58,7 +51,6 @@
 -->
     <section class="flexContenedor seccionDos">
         <!-- Conocimientos -->
-
         <h1>Estudios</h1>
         <span class="line"></span>
         <article class="articulo21">
@@ -315,6 +307,7 @@
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    //FUNCION JAVA SCRIPT para todos las anclas de la pagina,para evitar transicion bruscas
     $(function () {
 
         $('a[href*=#]').click(function () {

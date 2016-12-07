@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            body{
+                perspective: 800px;
+            }
+            #contendor {
+                position: relative;
+                margin: 9% auto;
+                width: 139px;
+                height: 217px;
+                transform-style: preserve-3d;
+                transition: transform 2s linear;
+            }
+            #contendor:hover{
+                transform: rotateY(540deg);
+            }
+            #carta1, #carta2{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+            #carta1{
+                background: url(carta1.png); 
+                z-index: 2;
+            }
+            #carta2{
+                background: url(carta2.png);
+                transform: rotateY(180deg);
+            }
+
+        </style>
+        <div id="contendor">
+            <div id="carta1"></div>
+            <div id="carta2"></div>
+        </div>
+    </body>
+</html>

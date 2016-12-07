@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table{
+                border: 1px transparent;
+            }
+            td, tr{
+                padding: 5px; /* Margen interior */
+            }
+        </style>
+    </head>
+    <body>
+        <form enctype="multipart/form-data" method="GET" autocomplete="on">
+            <table width="600px" border="1px">
+                <tr bgcolor="#97d1f5">
+                    <td colspan="2"><center>FORMULARIO DE REGISTROS</center></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Nombre y Apellidos</center></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Nombre y apellidos*:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="nombre" required="required"
+                                                 pattern="[A-z]+ [A-z]+ [A-z]+" placeholder="Ángel Pellejero Gomes" /></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Nombre de usuario*:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="usr" required="required"
+                                                 pattern="[A-z-0-9 !@#\$%\^&\*\?]+" placeholder="pellejero44" /></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Password*:</td>
+                    <td bgcolor="#e6e6e6"><input type="password" name="usr" required="required"
+                                                 pattern="[A-z-0-9 !@#\$%\^&\*\?]+"/></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Direccion</center></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Tipo de Via*:</td>
+                    <td bgcolor="#e6e6e6"> 
+                        <input type="radio" name="via" value="Calle" required="required">Calle
+                        <input type="radio" name="via" value="Avenida" required="required">Avenida
+                        <input type="radio" name="via" value="Paseo" required="required">Paseo
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Nombre de la via*:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="nVia" required="required"
+                                                 pattern="[A-z]+ [A-z]+ [A-z]* [A-z]*" placeholder="Av de la Paz"/></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Numero:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="num" 
+                                                 pattern="^6[0-9]{8}$" placeholder="678393562"/></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Codigo Postal*:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="cp" required="required"
+                                                 pattern="[0-9]{5}$" placeholder="26500"/></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Municipio:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="municipio"/></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Provincia:</td>
+                    <td bgcolor="#e6e6e6">
+                        <select>
+                            <option value="volvo">La Rioja</option>
+                            <option value="saab">Navarra</option>
+                            <option value="mercedes">Madrid</option>
+                            <option value="audi">Sevilla</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Datos Personales</center></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">DNI*:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="dni"  required="required"
+                                                 pattern="^[0-9]{8}[A-Z]$" placeholder="72798430A" /></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Fecha De Nacimiento*:</td>
+                    <td bgcolor="#e6e6e6"><input type="date" name="nacimiento" required="required"/></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Email*:</td>
+                    <td bgcolor="#e6e6e6"><input type="email" name="email" required="required"
+                                                 pattern="^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$" placeholder="pellejero44@gmail.com"/></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Espacio Web:</td>
+                    <td bgcolor="#e6e6e6"><input type="url" name="web"/></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Telefono:</td>
+                    <td bgcolor="#e6e6e6"><input type="text" name="tel"
+                                                 pattern="^6[0-9]{8}$" /></td>
+
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Fotos:</td>
+                    <td bgcolor="#e6e6e6"><input type="file" name="uploadedfile"/></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Intereses</center></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Seleccione sus preferencias:</td>
+                    <td bgcolor="#e6e6e6">
+                        <input type="checkbox"> Deportes
+                        <input type="checkbox"> Musica
+                        <input type="checkbox"> Cine
+                        <input type="checkbox"> Informatica
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Color preferido:</td>
+                    <td bgcolor="#e6e6e6"><input type="color" name="color"/></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center> <input type="image" src="foto.png"  formmethod="POST"> </br>
+                    <input type="submit" name="enviar" value="Enviar por get sin validar"/></center></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

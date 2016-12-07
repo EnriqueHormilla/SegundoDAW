@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicio formatear tabla</title>
+    </head>
+
+    <body>
+        <style>
+            table{
+                border-collapse: collapse;
+                border: 1px solid #333;
+            }
+            th{
+                text-align: center;
+            }
+            td{
+                text-align: center;
+            }
+            .b{
+                background-image: url("fondo_gris.gif");
+            }
+            .n{
+                text-align: left;
+                font-family: arial;
+                background-color: #E6F3FF;
+            }
+            tr:nth-child(even){
+                background: #FFFFCC;
+            }
+            table tr:hover {
+                background: #FFFF66;
+            }
+        </style>
+        <table border="1" summary="Tipos de cambio">
+            <tbody>
+                <tr>
+                    <th scope="col" class="b">Cambio</th>
+                    <th scope="col" class="b">Compra</th>
+                    <th scope="col" class="b">Venta</th>
+                    <th scope="col" class="b">Máximo</th>
+                    <th scope="col" class="b">Mínimo</th>
+                </tr>
+                <tr>
+                    <th scope="row" class="n"><img src="euro.png">Euro/Dolar</th>
+                    <td>1.2524</td>
+                    <td>1.2527</td>
+                    <td>1.2539</td>
+                    <td>1.2488</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="n"><img src="dolar.png">Dolar/Yen</th>
+                    <td>119.01</td>
+                    <td>119.05</td>
+                    <td>119.82</td>
+                    <td>119.82</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="n"> <img src="libra.png">Libra/Dolar</th>
+                    <td>1.8606</td>
+                    <td>1.8611</td>
+                    <td>1.8651</td>
+                    <td>1.8522</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="n"><img src="yen.png">Yen/Euro</th>
+                    <td>149.09</td>
+                    <td>149.13</td>
+                    <td>149.79</td>
+                    <td>148.96</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>

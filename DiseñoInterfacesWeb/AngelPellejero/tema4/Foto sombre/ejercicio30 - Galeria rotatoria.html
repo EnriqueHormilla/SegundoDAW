@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Ejercicio 30 Galeria rotatoria</title>
+	<style>	
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			background: white;
+			border: 1px solid blue;
+			margin: 3em auto;
+			padding: 3em;
+			max-width: 1000px;
+			height: 800px;
+		}
+	
+		#galeria {
+			width: 700px;
+			margin-top: 60px auto;
+			margin-bottom: 60px auto;
+			font-size: .8em;
+
+		}
+		
+		#galeria figure {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 10px 10px 25px 10px;
+			background-color: #eee;
+			border: 1px solid #fff;
+			box-shadow: 0px 2px 15px 2px  #333;
+		   -webkit-box-shadow: 0px 2px 15px 2px  #333;
+		   -moz-box-shadow: 0px 2px 15px 2px  #333;
+			text-align: center;
+		}
+		
+		
+		.imagen1 {
+			z-index: 1;
+			transform: rotate(-10deg);
+			-webkit-transform: rotate(-10deg);
+			-moz-transform: rotate(-10deg);
+			-o-transform: rotate(-10deg);
+			-ms-transform: rotate(-10deg);
+			
+		}
+		
+		.imagen2 {
+			z-index: 2;
+			transform: rotate(8deg) ;
+			-webkit-transform: rotate(8deg) ;
+			-moz-transform: rotate(8deg) ;
+			-o-transform: rotate(8deg) ;
+			-ms-transform: rotate(8deg) ;
+		}
+		
+		.imagen3 {
+			z-index: 4;
+			transform: rotate(10deg);
+			-webkit-transform: rotate(10deg);
+			-moz-transform: rotate(10deg);
+			-o-transform: rotate(10deg);
+			-ms-transform: rotate(10deg);
+		}
+		
+		.imagen4 {
+			z-index: 3;
+			transform: rotate(-15deg) ;
+			-webkit-transform: rotate(-15deg) ;
+			-moz-transform: rotate(-15deg) ;
+			-o-transform: rotate(-15deg) ;
+			-ms-transform: rotate(-15deg) ;
+		}
+		
+		
+		#galeria figure:hover {
+			z-index: 15;
+			box-shadow: 0px 5px 15px 5px  #000;
+		   -webkit-box-shadow: 0px 5px 15px 5px  #000;
+		   -moz-box-shadow: 0px 5px 15px 5px  #000;
+		   background-color: white;
+		   transform: rotate(0deg) ;
+		   -webkit-transform: rotate(0deg) ;
+		   -moz-transform: rotate(0deg) ;
+		   -o-transform: rotate(0deg) ;
+		   -ms-transform: rotate(0deg) ;  
+		}
+		
+	
+	</style>
+</head>
+
+<body>
+	<section id="galeria">
+		<figure class="imagen1">
+		  <img src="imagenes/logronoPuentePiedra.jpg" alt="Logroño">
+		  <figcaption>Logroño</figcaption>
+		</figure>
+		<figure class="imagen2">
+		  <img src="imagenes/logronoPuentePiedra1.jpg" alt="Puente de piedra">
+		  <figcaption>Puente de piedra</figcaption>
+		</figure>
+		<figure class="imagen3">
+		  <img src="imagenes/logronoRioEbro.jpg" alt="Río Ebro">
+		  <figcaption>Río Ebro</figcaption>
+		</figure>
+		<figure  class="imagen4">
+		  <img src="imagenes/logronoEspolon.jpg" alt="Paseo del Espolón">
+		  <figcaption>Paseo del Espolón</figcaption>
+		</figure>
+	</section>
+</body>
+</html>
