@@ -9,34 +9,86 @@
 
 <body>
     <section class="titulo">Mensajes Publicados</section>
-    <section class="mensajesPublicados"></section>
+    <section class="cajaMensajesPublicados" id="cajaMensajesPublicados">
+        <!-- <section class="mensajesPublicados"></section> -->
+    </section>
     <section class="publicador">
-         <h1>Publica aqui tu mensaje</h1>
-          <section class="EdicionInline">
-              <ul>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-                  <l1></l1>
-              </ul>
-          </section>
-         <section class="EdicionInline"></section>
-         <input type="submit">
-     </section>
-    
+        <h1>Publica aqui tu mensaje</h1>
+        <section class="iconosEdicionInline">
+            <ul>
+                <l1><img class="iconos" onclick="negrita()" src="imagenes/negrita.jpg"></l1>
+                <l1><img class="iconos" onclick="cursiva()" src="imagenes/cursiva.jpg"></l1>
+                <l1><img class="iconos" onclick="subrayado()" src="imagenes/subrayado.jpg"></l1>
+                <l1><img class="iconos" onclick="alini()" src="imagenes/alini.jpg"></l1>
+                <l1><img class="iconos" onclick="alinc()" src="imagenes/alinc.jpg"></l1>
+                <l1><img class="iconos" onclick="alind()" src="imagenes/alind.jpg"></l1>
+                <l1><img class="iconos" onclick="alinf()" src="imagenes/alinf.jpg"></l1>
+                <l1><img class="iconos" onclick="lno()" src="imagenes/lno.jpg"></l1>
+                <l1><img class="iconos" onclick="lor()" src="imagenes/lor.jpg"></l1>
+                <l1><img class="iconos" onclick="subi()" src="imagenes/subi.jpg"></l1>
+                <l1><img class="iconos" onclick="supi()" src="imagenes/supi.jpg"></l1>
+                <l1><img class="iconos" onclick="fco()" src="imagenes/fco.jpg"></l1>
+                <l1><img class="iconos" onclick="bco()" src="imagenes/bco.jpg"></l1>
+                <l1><img class="iconos" onclick="imagen()" src="imagenes/imagen.jpg"></l1>
+                <l1><img class="iconos" onclick="hipervinculo()" src="imagenes/hipervinculo.jpg"></l1>
+            </ul>
+        </section>
+        <section class="EdicionInline" id="mensajeGuardar" contenteditable="true" spellcheck="true"></section>
+        <section class="btnEdicionInline">
+            <input onclick="guardar()" type="submit">
+        </section>
+
+    </section>
+
 
     <script>
+        function negrita() {
+            document.execCommand("bold", false, null);
+        }
+
+        function cursiva() {  document.execCommand("italic", false, null);}
+
+        function subrayado() { document.execCommand("underline", false, null);}
+
+        function alini() {document.execCommand("justifyleft", false, null);}
+
+        function alinc() {document.execCommand("justifycenter", false, null);}
+
+        function alind() {document.execCommand("justifyright", false, null);}
+
+        function alinf() {document.execCommand("justifyfull", false, null);}
+
+        function lno() {document.execCommand("insertunorderedlist", false, null);}
+
+        function lor() {document.execCommand("insertorderedlist", false, null);}
+
+        function subi() {document.execCommand("subscript", false, null);}
+
+        function supi() {document.execCommand("superscript", false, null);}
+
+        function fco() {document.execCommand("forecolor", false, "red");}
+
+        function bco() {document.execCommand("backcolor", false, "yellow");}
+
+        function imagen() {
+            var ruta=prompt('seleciona la img','https://www.google.es/images/branding/googleg/1x/googleg_standard_color_128dp.png');
+            
+            document.execCommand("insertimage", false,ruta);
+            
+        }
+
+        function hipervinculo() { 
+            var direccion=prompt("Dame la URL:","http://");
+            document.execCommand("createlink",false,direccion);
+        }
+        function guardar(){
+            var mensaje=document.getElementById("cajaMensajesPublicados").innerHTML;
+            mensaje+='<section class="mensajesPublicados">';
+            mensaje+=document.getElementById("mensajeGuardar").innerHTML;
+            mensaje+='</section>'
+            document.getElementById("cajaMensajesPublicados").innerHTML=mensaje;
+           
+        }
     </script>
 </body>
 

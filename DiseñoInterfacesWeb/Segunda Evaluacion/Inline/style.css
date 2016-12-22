@@ -1,0 +1,65 @@
+body {
+    background-color: gray;
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    background-color: #656161;
+    width: 99%;
+    margin: 0 auto;
+    border: 1px solid white;
+}
+
+.cajaMensajesPublicados {
+    width: 99%;
+    margin:20px;
+}
+.mensajesPublicados{
+    padding: 20px auto 20px auto;
+    border-radius: 50px;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    margin:5px;
+
+}
+.publicador {
+    background-color: gainsboro;
+    height: 300px;
+    width: 99%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.publicador>h1 {
+    text-align: center;
+}
+
+.iconosEdicionInline>ul {
+    text-align: center;
+    background-color: gray;
+    border-radius: 50px;
+    width: 80%;
+    margin: 10px auto 10px auto;
+}
+
+.iconos {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 10px 6px 0 0;
+}
+
+.EdicionInline {
+    background-color: white;
+    height: 150px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.btnEdicionInline {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
