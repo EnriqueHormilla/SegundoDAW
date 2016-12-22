@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejercicio 34 Acordeon frutas</title>
+	<style>	
+		body {
+			font: .8em;
+			font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+		}
+		
+		#menu {
+			width: 100px;
+			padding: 20px;
+			border: 1px solid #333;
+			background-color: #ccc;
+		}
+		
+		#menu ul {
+			margin:0;
+			padding:0;
+			position: relative;
+			list-style: none;
+		}
+	
+		#menu ul li {
+			width: 70px;
+			height:20px;
+			margin: 0 0 30px 0;
+		}
+		
+		#menu ul li:last-child {
+			margin: 0;
+		}
+
+		#menu ul li a.enlace {
+			position: absolute;
+			z-index: 100;
+			display: block;
+			color: black;
+			text-decoration: none;
+		}
+		
+		#menu ul li div {
+			position: absolute;
+			z-index:50;
+			left: 0:
+			top: 0;
+			opacity: 0;
+			border: 1px solid #fff;
+			overflow: hidden;
+			background-color: black;
+			color: white;
+			text-align: right;
+			padding:15px;
+			width: 300px;
+			height:130px;
+			-moz-transition: all 1s ease-in;
+			-webkit-transition: all 1s ease-in;
+			-o-transition: all 1s ease-in;
+			transition: all 1s ease-in;
+		}
+		
+		#menu ul li div {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			-moz-transition-property: left;
+			-moz-transition-duration: 2s;
+			-webkit-transition-property: left;
+			-webkit-transition-duration: 2s;
+			-o-transition-property: left;
+			-o-transition-duration: 2s;
+			transition-property: left;
+			transition-duration: 2s;
+		}
+		
+		#menu ul li div:hover {
+			left: 20px;
+		}
+	
+		#menu ul li div p {
+			width: 300px;
+		}
+	
+		#menu ul li:hover div{
+			left: 90px;
+			opacity: 1;
+		}
+	
+
+	</style>
+</head>
+
+<body>
+	<section id="menu">
+		<ul>
+			<li>
+				<a href="#" class="enlace">Manzanas</a>
+				<div>
+					<h3>Las manzanas</h3>
+					<p>Nullam id dolor id nibh ultricies vehicula ut id
+					elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+					dolor auctor.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="enlace">Peras</a>
+				<div>
+					<h3>Las peras</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Maecenas faucibus mollis interdum. Maecenas
+					sed diam eget risus varius blandit sit amet non magna.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="enlace">Plátanos</a>
+				<div>
+					<h3>Los plátanos</h3>
+					<p>Sed posuere consectetur est at lobortis. Donec
+					ullamcorper nulla non metus auctor fringilla.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="enlace">Fresas</a>
+				<div>
+					<h3>Los fresas</h3>
+					<p>Donec id elit non mi porta gravida at eget
+					metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+</body>
+</html>

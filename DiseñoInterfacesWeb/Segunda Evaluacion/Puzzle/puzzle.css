@@ -1,0 +1,36 @@
+#contenedorPuzzle {
+    width: 300px;
+    height: 500px;
+    background: white;    
+    color: #ccc;
+    padding: 35px;
+}
+
+#piezas, #puzzle {
+    background: #b5a6e0;
+    width: 305px;
+    height: 205px;
+    padding: 10px;
+    float: left;
+    margin-top: 20px;   
+}
+
+#puzzle {
+    background: #b2fda0;    
+}
+
+.contenedorPieza {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #addea1;    
+    margin: 0.6px
+}
+
+#contenedorPuzzle img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0.4px;
+
+}

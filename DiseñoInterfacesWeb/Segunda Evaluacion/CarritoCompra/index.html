@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de la compra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>TIENDA ONLINE</h1>
+    <section id="tiendaOnline">
+        <div >
+            <table id="catalogo" ondragenter="return entrar(event)" ondragover="return encima(event)" ondrop="return soltar(event)">
+                <thead>
+                    <tr>
+                        <th>IMAGEN</th>
+                        <th>Descripcion</th>
+                        <th>PRECIO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="producto" id="ordenadorDELL" draggable="true" ondragstart="empezarProducto(event)" ondragend="endProducto(event)">
+                        <td><img id="ordenadorDELL" src="img/dell.jpg" widtd="50" height="50" /></td>
+                        <td>Ordenador DELL</td>
+                        <td>900€</td>
+                    </tr>
+                    <tr class="producto" id="ordenadorSONY" draggable="true" ondragstart="empezarProducto(event)" ondragend="endProducto(event)">
+                        <td><img id="ordenadorSONY" src="img/sony.jpg" widtd="50" height="50" /></td>
+                        <td>Ordenador SONY</td>
+                        <td>900€</td>
+                    </tr>
+                    <tr class="producto" id="ordenadorApple" draggable="true" ondragstart="empezarProducto(event)" ondragend="endProducto(event)">
+
+                        <td><img id="ordenadorApple" src="img/apple.JPG" widtd="50" height="50" /></td>
+                        <td>Ordenador APPLE</td>
+                        <td>900€</td>
+                    </tr>
+                    <tr class="producto" id="ordenadorPB" draggable="true" ondragstart="empezarProducto(event)" ondragend="endProducto(event)">
+
+                        <td><img id="ordenadorPB" src="img/pb.jpg" widtd="50" height="50" /></td>
+                        <td>Ordenador PB</td>
+                        <td>900€</td>
+                    </tr>
+                    <tr class="producto" id="ordenadorACER" draggable="true" ondragstart="empezarProducto(event)" ondragend="endProducto(event)">
+
+                        <td><img id="ordenadorACER" src="img/acer.jpg" widtd="50" height="50" /></td>
+                        <td>Ordenador ACER</td>
+                        <td>900€</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+        <div id="parteDerecha">
+            <div id="carrito" ondragenter="return entrarCarro(event)" ondragover="return encima(event)" ondrop="return soltar(event)">
+                <img src="img/carrito.jpg" >
+            </div>
+            <div id="basuraCarrito" class="basuraCarrito" ondragenter="return entrar(event)" ondragover="return encima(event)" ondrop="return soltar(event)">
+
+            </div>
+        </div>
+    </section>
+    <script>
+        function empezarProducto(e) {
+            e.dataTransfer.effecAllowed = 'move';
+            //   alert(event.target.id);
+            e.dataTransfer.setData("Data", e.target.id);
+        }
+
+        function endProducto(e) {
+            e.dataTransfer.clearData("Data");
+        }
+
+        function entrar(e) {
+            return true;
+        }
+
+        function encima(e) {
+           
+            if ((e.target.id == "carrito") || (e.target.id == "catalogo") )
+                return false;
+            else
+                return true;
+        }
+        
+        function encima(e) {
+           
+            if ((e.target.id == "carrito") || (e.target.id == "basuraCarrito") ||(e.target.id == "catalogo"))
+                return false;
+            else
+                return true;
+        }
+
+        function soltar(e) {
+
+            /*  COMO DEBERIA QUEDAR   
+            e.preventDefault();
+            var node = document.createElement("LI");
+            node.ondrag
+            var textnode = document.createTextNode(e.dataTransfer.getData("Data"));
+            node.appendChild(textnode);            
+            document.getElementById("miCarro").appendChild(node);
+             */
+              e.preventDefault();
+              var elemento = e.dataTransfer.getData("Data");
+             // alert(elemento);
+              e.target.appendChild(document.getElementById(elemento));
+             
+          
+        }
+
+    </script>
+</body>
+
+</html>
