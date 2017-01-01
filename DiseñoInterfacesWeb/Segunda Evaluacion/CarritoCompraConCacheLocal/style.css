@@ -1,0 +1,27 @@
+body{
+    background-color: blueviolet;
+}
+#productos{
+    width: 95%;
+    margin: 0 auto;
+    background-color: aqua;
+    border-radius: 50px;
+    padding: 10px;
+}
+#productos>table{
+        width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+#Cajapedido{
+    width: 75%;
+    margin: 25px auto;
+    background-color: aqua;
+    border-radius: 50px;
+    padding: 10px; 
+}
+#Cajapedido>table{
+           width: 100%;
+    margin: 20px;
+    text-align: center; 
+}

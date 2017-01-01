@@ -1,0 +1,64 @@
+html{
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+}
+body{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+header {
+    background-color: brown;
+    display: inline-block;
+    width: 98%;
+    height: 15%;
+    padding: 0.5%;
+}
+.CajaLogo {
+   
+    float: left;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+}
+.CajaLogo>p{
+   
+    background-color: beige;
+    height: 50%;
+    width: 50%;
+}
+nav {
+    float: right;
+    width: 70%;
+    background-color: #226767;
+    height: 100%;
+}
+nav>ul {
+    text-align: center;
+    width: 65%;
+    float: right;
+    margin: 2%;
+    height: 100%;
+}
+nav>ul>li {
+    display: inline-block;
+    height: 50%;
+    width: 24%;
+    background-color: beige;
+}
+.cuerpo {
+    width: 90%;
+    margin: 0.5% auto;
+    height: 79%;
+    background-color: bisque;
+}
+.cajas {
+    display: inline-block;
+    width: 25%;
+    /* margin-left: 7%; */
+    height: 95%;
+    margin: 2% 3.5% 2% 3.5%;
+    background-color: blueviolet;
+}

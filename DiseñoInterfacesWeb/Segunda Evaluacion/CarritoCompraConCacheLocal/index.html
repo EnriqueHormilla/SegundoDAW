@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1></h1>
+    <section id="productos">
+        <table>
+            <thead>
+                <tr>
+                    <th>IMAGEN</th>
+                    <th>DESCRIPCION</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th>COMPRAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img width="50" height="50" src="imagenes/dell.jpg" alt=""></td>
+                    <td>Ordenador Dell</td>
+                    <td id="precioDell">500</td>
+                    <td>
+                        <input id="cantidadDell" type="number" value="0">
+                    </td>
+                    <td>
+
+                        <button onclick="comprar('Dell')">comprar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img width="50" height="50" src="imagenes/sony.jpg" alt=""></td>
+                    <td>Ordenador Sony</td>
+                    <td id="precioSony">800</td>
+                    <td>
+                        <input id="cantidadSony" type="number" value="0">
+                    </td>
+                    <td>
+
+                        <button onclick="comprar('Sony')">comprar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img width="50" height="50" src="imagenes/apple.JPG" alt=""></td>
+                    <td>Ordenador Apple</td>
+                    <td id="precioApple">5000</td>
+                    <td>
+                        <input id="cantidadApple" type="number" value="0">
+                    </td>
+                    <td>
+
+                        <button onclick="comprar('Apple')">comprar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img width="50" height="50" src="imagenes/pb.jpg" alt=""></td>
+                    <td>Ordenador PB</td>
+                    <td id="precioPb">500</td>
+                    <td>
+                        <input id="cantidadPb" type="number" value="0">
+                    </td>
+                    <td>
+
+                        <button onclick="comprar('Pb')">comprar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img width="50" height="50" src="imagenes/acer.jpg" alt=""></td>
+                    <td>Ordenador Acer</td>
+                    <td id="precioAcer">300</td>
+                    <td>
+                        <input id="cantidadAcer" type="number" value="0">
+                    </td>
+                    <td>
+                        <button onclick="comprar('Acer')">comprar</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </section>
+    <section id="Cajapedido">
+        <table>
+            <thead>
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>CANTIDAD</th>
+                    <th>PRECIO UND</th>
+                    <th>PRECIO TOTAL</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody id="pedidos">
+
+            </tbody>
+        </table>
+        <button onclick="limpiar()">Limpiar Cesta</button>
+    </section>
+    <script>
+        var unidadesEnCarro = localStorage.length;
+        refrescarCarro();
+
+        function comprar(s1) {
+            var cantidadAdd = document.getElementById("cantidad" + s1).value;
+            var precio = cantidadAdd * document.getElementById("precio" + s1).innerHTML;
+            var productoComprado = [s1, cantidadAdd, document.getElementById("precio" + s1).innerHTML, precio];
+            if (comprobarSiAddProducto(productoComprado) == false) {
+                //alert("este producto solo se modifica");
+
+            } else {
+                //alert("este producto hay que añadirlo")
+                localStorage.setItem(unidadesEnCarro, productoComprado);
+                unidadesEnCarro++;
+            }
+            refrescarCarro();
+        }
+
+        function refrescarCarro() {
+            var pedidosActuales = "";
+            var cont = localStorage.length;
+            for (i = 0; i < cont; i++) {
+                var clave = localStorage.key(i);
+                var arrayDatos = localStorage.getItem(clave);
+                arrayDatos = arrayDatos.split(",");
+
+                pedidosActuales += "<tr>";
+                pedidosActuales += "<td>" + arrayDatos[0] + "</td>";
+                pedidosActuales += "<td>" + arrayDatos[1] + "</td>";
+                pedidosActuales += "<td>" + arrayDatos[2] + "</td>";
+                pedidosActuales += "<td>" + arrayDatos[3] + "</td>";
+                pedidosActuales += "<td><button onclick='eliminar(" + clave + ")'>eliminar</button></td>";
+                pedidosActuales += "</tr>";
+            }
+            document.getElementById("pedidos").innerHTML = pedidosActuales;
+
+        }
+
+        function comprobarSiAddProducto(producto) {
+            var anadirProducto = true;
+            var cont = localStorage.length;
+            for (i = 0; i < cont; i++) {
+                var clave = localStorage.key(i);
+                var arrayDatos = localStorage.getItem(clave);
+                arrayDatos = arrayDatos.split(",");
+                if (arrayDatos[0] == producto[0]) {
+                    anadirProducto = false;
+                    localStorage.setItem(i, producto);
+                    break;
+                }
+            }
+            return anadirProducto;
+        }
+
+        function eliminar(numero) {
+            var clave = localStorage.key(numero);
+            var resultado = localStorage.removeItem(clave);
+            refrescarCarro();
+        }
+
+        function limpiar() {
+            localStorage.clear();
+            refrescarCarro();
+        }
+    </script>
+</body>
+
+</html>
