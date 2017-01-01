@@ -1,0 +1,62 @@
+<html xmlns="http://wwww.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
+    <title> Ejercicio 4</title>
+
+</head>
+
+<body>
+    <h1>Distribuidor de libros</h1>
+    <div>
+        Ingresa la Cantidad de lisbros:
+        <input required id="cantidadLibros" />
+    </div>
+    <div>
+        Ingresa el total del importe en €:
+        <input required id="dineroTotal" />
+    </div>
+    <div>
+        pagar con descuneto aplicado:
+        <input  id="importeFinal" > 
+    </div>
+    <div>
+        <button id="libreria" value="LIBERIA" onclick="calcularImporte('libreria');">Libreria</button>
+        <button id="particular" value="particular" onclick="calcularImporte('particular');">Particular</button>
+        <button id="borrarDatos" value="borrar" onclick="borrarDatos();">Borrar Datos</button>
+    </div>
+    <script type="text/javascript">
+        function calcularImporte(tipoCliente) {
+            var cantidadLibros = document.getElementById("cantidadLibros").value;
+            var dineroTotal = document.getElementById("dineroTotal").value;
+            var importeFinal
+            if (tipoCliente == "libreria") {
+                if (cantidadLibros <= 24) {
+                    importeFinal = dineroTotal - (dineroTotal * 0.10);
+                } else {
+                    importeFinal = dineroTotal - (dineroTotal * 0.25);
+                }
+            } else {
+
+               if (cantidadLibros <= 6) {
+                    importeFinal = dineroTotal;
+                    
+                } else if ( (cantidadLibros >6) && (cantidadLibros <= 18)) {
+                    importeFinal = dineroTotal - (dineroTotal * 0.05);
+                   
+                } else if (cantidadLibros >18) {
+                    importeFinal = dineroTotal - (dineroTotal * 0.10);
+                   
+                }
+
+
+            }           
+            document.getElementById("importeFinal").value= importeFinal;
+
+        }
+    </script>
+    <noscript> Necesitas activar JavaScript.</noscript>
+
+</body>
+
+</html>
