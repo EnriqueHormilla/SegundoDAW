@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function Cometa(diametro, temperatura, nombre) {
+            this.diametro = diametro;
+            this.temperatura = temperatura;
+            this.nombre = nombre;
+            this.definicion = "Definición de cometa";
+
+            
+
+            Cometa.prototype.obtenerTemperaturaFarenheit = function() {
+                return ((this.temperatura * 1.8) + 30);
+            }
+        }
+        function obtener(){
+                return this.diametro / 2;
+            }
+    </script>
+</head>
+
+<body>
+    <script>
+        cometa1 = new Cometa(10, 30, "Haley");
+        cometa2 = new Cometa(22, 50, "Charly");
+        cometa3 = new Cometa(5, 60, "Trapero");
+
+        document.write("Radio del cometa " + cometa1.nombre + ": " + obtener.call(cometa1) + "<br> Grados fahrenheit: " + cometa1.obtenerTemperaturaFarenheit()+"<br>");
+        document.write("Radio del cometa " + cometa2.nombre + ":" + obtener.call(cometa1) + "<br> Grados fahrenheit: " + cometa2.obtenerTemperaturaFarenheit()+"<br>") ;
+        document.write("Radio del cometa " + cometa3.nombre + ":" + obtener.call(cometa1) + "<br> Grados fahrenheit: " + cometa3.obtenerTemperaturaFarenheit()+"<br>");
+
+
+    </script>
+</body>
+
+</html>

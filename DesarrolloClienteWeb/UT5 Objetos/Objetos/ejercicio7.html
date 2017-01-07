@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Persona(nombre, nacionalidad) {
+            this.nombre = nombre;
+            this.nacionalidad = nacionalidad;
+            
+            Persona.prototype.mostrarNacionalidad = function () {
+                alert("Nacionalidad: " + this.nacionalidad);
+            }
+        }
+
+        function Medico(centroTrabajo, nombre, nacionalidad) {
+            Persona.call(this, nombre, nacionalidad);
+            this.centroTrabajo = centroTrabajo;
+        }
+        function centro(){
+            alert("Centro salud: "+ this.centroTrabajo);
+        }
+        Medico.prototype = new Persona();
+
+        function MedicoEspecialista(especialidad, centroTrabajo, nombre, nacionalidad) {
+            Medico.call(this, centroTrabajo, nombre, nacionalidad);
+            this.especialidad = especialidad;
+        }
+        MedicoEspecialista.prototype = new Medico();
+    </script>
+</head>
+
+<body>
+    <script>
+        m = new MedicoEspecialista("Cirujano", "San Pedro", "Carlos", "Español");
+        m.mostrarNacionalidad();
+        centro.apply(m);
+    </script>
+</body>
+
+</html>

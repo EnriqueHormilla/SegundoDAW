@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function mostrarNombre() {
+            alert("Nombre: " + this.nombre);
+        }
+
+        function verNombreYsexo() {
+            alert("Nombre: " + this.nombre + "Sexo: " + this.sexo);
+        }
+
+        function Persona(dni, nombre, apellidos, sexo) {
+            this.dni = dni;
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.sexo = sexo;
+        }
+
+        function Empresa(cif, nombre, sector, nTrabajadores) {
+            this.cif = cif;
+            this.nombre = nombre;
+            this.sector = sector;
+            this.nTrabajadores = nTrabajadores;
+        }
+
+        function Mascota(nombre, raza, sexo) {
+            this.nombre = nombre;
+            this.raza = raza;
+            this.sexo = sexo;
+        }
+
+        function EquipoFutbol(nombre, entrenador, ligasGanadas) {
+            this.nombre = nombre;
+            this.entrenador = entrenador;
+            this.ligasGanadas = ligasGanadas;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        p1 = new Persona(1, "Isabel", "Lavieja", "Mujer");
+        e1 =  new Empresa(12, "Nombre de la empresa" , "X", 15);
+        m1 = new Mascota("Chimo", "Yorkshire", "Macho");
+        f1 = new EquipoFutbol("Nombre del Equipo", "Nombre del entrenador", 2);
+
+      mostrarNombre.call(p1);
+      mostrarNombre.call(f1);
+      verNombreYsexo.apply(p1);
+      verNombreYsexo.apply(m1);
+
+    </script>
+</body>
+
+</html>
