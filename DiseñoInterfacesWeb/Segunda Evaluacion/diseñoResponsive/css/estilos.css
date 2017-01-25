@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 16px = 12pt = 100% = 1em (ancho M)*/
+/* em valores relativos que se ajustan a pantalla*/
+/* px valores absolutos*/
+body {
+    background: #212121;
+    font-family: Helvetica, Verdana;
+}
+
+.contenedor{
+    /*width: 1000px;*/
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header{
+    background: #1E6381;
+    margin: 20px 0; 
+}
+
+header h1{
+    color: #F60;
+    padding: 20px 0; 
+    text-align: center;
+}
+
+.main{
+    /*width: 700px;*/
+    width: 70%;
+    background: #fff;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+    /*FUERZA que el tamaño no exceda del marcado en el width aún con padding --> hace más pequeño el contenido*/
+}
+.main img{
+    width: 100%;
+    height: auto;
+}
+
+aside{
+    /*width: 300px;*/
+    width: 30%;
+    padding: 20px;  
+    background: #CCC;
+    float: left;
+    box-sizing: border-box;
+    /* box-sizing: main70%+aside30%=100%*/
+    /*Si sumamos los padding sobrepasa*/
+}
+
+footer{
+    clear: both;
+    float: left;
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    color: #FFF;
+    background: #000;
+}
+
+@media screen and (max-width: 800px){
+    /*Solo cambia el color de fondo*/
+ /*   body{
+        background: #ff8000; 
+    }*/
+    .main {
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contenedor{
+        width: 100%;
+    }
+    aside{
+        display: none;
+    }
+}

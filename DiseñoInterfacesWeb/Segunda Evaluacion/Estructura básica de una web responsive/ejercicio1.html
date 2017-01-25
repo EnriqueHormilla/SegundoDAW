@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-image: url(img/fondo.jpg);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* flex: inherit; */
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .contenedor {
+            margin: 0.5%;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #titulo {
+            min-height: 15%;
+        }
+        
+        #titulo>h1 {
+            font-size: 52px;
+            color: orange;
+            text-shadow: 4px 3px 8px #FFF;
+        }
+        
+        header {
+            min-height: 10%;
+        }
+        
+        nav {
+            min-height: 10%;
+        }
+        
+        .cuerpo {
+            min-height: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+        }
+        
+        article {
+            width: 75%;
+            margin: 2% 0.5% 2% 0.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        aside {
+            width: 15%;
+            margin: 0 0.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        footer {
+            min-height: 10%;
+            margin-bottom: 5% !important;
+        }
+        
+        .fondoAzulClaro {
+            background-color: rgb(30, 99, 129);
+            -webkit-border-radius: 5px 10px;
+            /* Safari  */
+            -moz-border-radius: 5px 10px;
+            /* Firefox */
+            text-align: center;
+            color: white;
+        }
+        
+        .fondoAzulOscuro {
+            background-color: rgb(23, 73, 105);
+            -webkit-border-radius: 10px 10px;
+            /* Safari  */
+            -moz-border-radius: 10px 10px;
+            /* Firefox */
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="contenedor" id="titulo">
+        <h1>Estrucutra Basica Semantica en HTML5</h1></section>
+    <header class="fondoAzulClaro contenedor">HEADER</header>
+    <nav class="fondoAzulClaro contenedor"> NAV</nav>
+    <section class="fondoAzulClaro contenedor cuerpo">
+        <article class="fondoAzulOscuro">article</article>
+        <aside class="">ARTICLE</aside>
+    </section>
+    <footer class="fondoAzulClaro contenedor">FOOTER</footer>
+
+</body>
+
+</html>

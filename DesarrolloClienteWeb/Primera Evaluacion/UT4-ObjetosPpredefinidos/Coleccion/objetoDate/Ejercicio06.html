@@ -1,0 +1,58 @@
+<!--
+Muestra la fecha y hora actual según el horario GMT y según el horario
+actual.
+-->
+<html xmlns="http://wwww.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+			<title> Ejercicio 2</title>
+
+	</head>
+	Muestra la fecha y hora actual según el horario GMT y según el horario
+	actual.
+	<body>
+
+		<script type="text/javascript">
+
+			var d = new Date();
+			var milisegundosDiferencia=d.getTimezoneOffset()*60*1000;
+
+
+ 			document.write("<br>GTM Hora actual : ");
+	 				document.write(d.getHours()+":");
+	 				document.write(d.getMinutes()+":");
+	 				document.write(+d.getSeconds()+"<br>");
+	 		document.write("Dia del mes actual : " +d.getDay()+"<br>");
+	 		document.write("Mes del anio actual : " +(d.getMonth()+1)+"<br>");
+	 		document.write("Anio actual : " +d.getFullYear()+"<br>");
+
+		if(milisegundosDiferencia>0){
+			milisegundosDiferencia=Math.abs(milisegundosDiferencia);
+
+
+			d.setTime(d.getTime()+milisegundosDiferencia);
+		}else{
+			milisegundosDiferencia=Math.abs(milisegundosDiferencia);
+
+		
+			d.setTime(d.getTime()-milisegundosDiferencia);
+		}
+
+		document.write("---------------------------------------<br>");
+		document.write("Hora actual : ");
+			document.write(d.getHours()+":");
+			document.write(d.getMinutes()+":");
+			document.write(+d.getSeconds()+"<br>");
+	document.write("Dia del mes actual : " +d.getDay()+"<br>");
+	document.write("Mes del anio actual : " +(d.getMonth()+1)+"<br>");
+	document.write("Anio actual : " +d.getFullYear()+"<br>");
+
+
+
+
+
+				</script>
+	<noscript>
+	Necesitas activar JavaScript.
+	</body>
+</html>

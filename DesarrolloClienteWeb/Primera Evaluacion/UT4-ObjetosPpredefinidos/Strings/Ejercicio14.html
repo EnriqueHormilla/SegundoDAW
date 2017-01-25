@@ -1,0 +1,26 @@
+<html xmlns="http://wwww.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta charset="utf-8">
+        <title> Ejercicio 6</title>
+
+    </head>
+
+    <body>
+      <form name="formulario">
+      DNI:<br>
+      <input type="text" name="dni" maxlenght="11" size="11">
+      <input type="button" value="OK" language"JavaScript" onclick="averigua()">
+      </form>
+
+    </body>
+    <script>
+    function averigua ()
+    {
+    cadena="TRWAGMYFPDXBNJZSQVHLCKET"
+    posicion = formulario.dni.value % 23
+    letra = cadena.substring(posicion,posicion+1) 
+    document.formulario.dni.value=formulario.dni.value+" - "+letra
+    }
+    </script>
+</html>

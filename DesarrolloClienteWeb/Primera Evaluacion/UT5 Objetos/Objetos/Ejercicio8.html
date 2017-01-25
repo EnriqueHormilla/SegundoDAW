@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function Vehiculo(fuel, pasajeros, velocidad) {
+            this.maxFuel = fuel;
+            this.maxNroDePasajeros = pasajeros;
+            this.velocidad = velocidad;
+        }
+        Vehiculo.prototype.acelerar = function () {
+            document.write(this + " acelera<br>");
+        }
+        Vehiculo.prototype.desacelerar = function () {
+            document.write(this + " desacelera<br>");
+        }
+
+        function Auto(fuel, pasajeros, velocidad, modelo) {
+            Vehiculo.call(this, fuel, pasajeros, velocidad);
+            this.modelo = modelo;
+            Auto.prototype.toString = function autoToString() {
+                var mensaje = "Auto tipo: " + this.modelo;
+                return mensaje;
+            }
+        }
+        Auto.prototype = new Vehiculo();
+        Auto.doblarAIzq = function () {
+            document.write(this + " está girando a la izquierda<br>");
+        }
+        Auto.doblarADcha = function () {
+            document.write(this + " está girando a la derecha<br>");
+        }
+
+        function Avion(fuel, pasajeros, velocidad, maxAltitud, nroDeMotores) {
+            Vehiculo.call(this, fuel, pasajeros, velocidad);
+            this.mxAltitud = maxAltitud;
+            this.nroDeMotores = nroDeMotores;
+            Avion.prototype.toString = function avionToString() {
+                var mensaje = "Avion";
+                return mensaje;
+            }
+        }
+        Avion.prototype = new Vehiculo();
+        Avion.prototype.descender = function () {
+            document.write(this + " está descendiendo<br>");
+        }
+        Avion.prototype.ascender = function () {
+            document.write(this + " está ascendiendo<br>");
+        }
+        
+
+        
+    </script>
+</head>
+
+<body>
+    <script>
+        coche = new Auto(100, 5, 200, "coche");
+        avioneta = new Avion(1000, 200, 500, 40, 4);
+        coche.acelerar();
+        avioneta.desacelerar();
+        avioneta.descender();
+        avioneta.ascender();
+        avioneta.despegar();
+    </script>
+</body>
+
+</html>

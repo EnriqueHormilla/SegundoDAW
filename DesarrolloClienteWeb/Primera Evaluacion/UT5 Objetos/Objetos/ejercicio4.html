@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script>
+  function Cliente(nombre, apellidos, saldo){
+  this.nombre = nombre;
+  this.apellidos = apellidos;
+  this.saldo = saldo;
+  }
+
+  function depositar(cantidad){
+    this.saldo+= cantidad;
+    alert(this.saldo);
+  }
+
+function extraer(cantidad){
+    this.saldo-= cantidad;
+    alert(this.saldo);
+  }
+
+
+  </script>
+</head>
+<body>
+<script>
+c1 = new Cliente("Isabel", "Lavieja", 200);
+
+depositar.call(c1, 20);
+extraer.call(c1, 20);
+
+
+    </script>
+</body>
+</html>

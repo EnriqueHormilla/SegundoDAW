@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Alimentos(codigo, nombre, precio) {
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.precio = precio;
+            
+
+            this.imprimeDatos = function() {
+                document.write(this.codigo + " / " + this.nombre + " / " + this.precio + "€<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <script>
+        a = new Alimentos(1212, "leche", 0.5);
+        a1 = new Alimentos(323, "chocolate", 1);
+        a2 = new Alimentos(465, "galletas", 0.75);
+
+        var arrayAlimentos = new Array();
+        arrayAlimentos[0] = a;
+        arrayAlimentos[1] = a1;
+        arrayAlimentos[2] = a2;
+
+        for (var i = 0; i < arrayAlimentos.length; i++) {
+            arrayAlimentos[i].imprimeDatos();
+        }
+    </script>
+</body>
+
+</html>

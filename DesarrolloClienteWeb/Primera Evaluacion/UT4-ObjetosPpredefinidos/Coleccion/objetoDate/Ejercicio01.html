@@ -1,0 +1,30 @@
+<!-- Muestra en el documento activo el día de la semana actual.-->
+<html xmlns="http://wwww.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+			<title> Ejercicio 1</title>
+
+	</head>
+
+	<body>
+
+	<script type="text/javascript">
+
+		var d = new Date();
+		var n = d.getUTCDay();
+
+		var semana = new Array();
+				semana[0] = "Domingo";
+				semana[1] = "Lunes";
+				semana[2] = "Martes";
+				semana[3] = "Miercoles";
+				semana[4] = "Jueves";
+				semana[5] = "Viernes";
+				semana[6] = "Sabado";
+		var n = semana[d.getUTCDay()];
+		alert("Hoy es : " +n);
+			</script>
+	<noscript>
+	Necesitas activar JavaScript.
+	</body>
+</html>

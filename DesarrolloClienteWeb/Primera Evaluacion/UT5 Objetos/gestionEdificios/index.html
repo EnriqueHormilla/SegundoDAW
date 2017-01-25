@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="edificios.js"></script>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <div style="width: 50%;float: left;">
+        <h2>Añadir nuevo Edificios</h2>
+        <div style="">
+            <table>
+                <tr>
+                    <td>Numero o Identificativo del edificio</td>
+                    <td>
+                        <input type="number" id="numero" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Calle </td>
+                    <td>
+                        <input type="text" id="calle" required="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Codigo postal</td>
+                    <td>
+                        <input type="number" id="cp" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Alta" onclick="addEdificio()">
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Concretar el numero de plantas y puertas por planta </h2>
+        <div style="">
+            <table>
+                <tr>
+                    <td>¿Para que numero de edificio? </td>
+                    <td>
+                        <input type="number" id="numeroEdificioPlantasYPuertas" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numero de plantas </td>
+                    <td>
+                        <input type="number" id="numeroPlantas" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numero de puertas por plantas</td>
+                    <td>
+                        <input type="number" id="numeroPuertas" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Alta" onclick="addPlantasYPuertas()">
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <h2>Añadir un propietario a una puerta </h2>
+        <div style="">
+            <table>
+                <tr>
+                    <td>¿Para que numero de edificio? </td>
+                    <td>
+                        <input type="number" id="numeroEdificioParaAddPropietario" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>¿En que planta esta? </td>
+                    <td>
+                        <input type="number" id="plantaParaAddPropietario" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>¿Que puerta es?</td>
+                    <td>
+                        <input type="number" id="puertaParaAddPropietario" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre del propietario</td>
+                    <td>
+                        <input type="text" id="propietarioParaAddPropietario" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Alta" onclick="addPropietario()">
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Modificaciones</h2>
+        <div style="">
+            <table>
+                <tr>
+                    <td>¿Sobre que edificio ? </td>
+                    <td>
+                        <input type="number" id="numeroEdificioParaModificaciones" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numero Nuevo
+                        <input type="number" id="numeroNuevo" required=""> </td>
+                    <td>
+                        <input type="button" value="Realizar cambio" onclick="changeNumeroEdificio()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Calle nueva
+                        <input type="text" id="calleNueva" required=""> </td>
+                    <td>
+                        <input type="button" value="Realizar cambio" onclick="changeNombreCalle()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>CP Nuevo
+                        <input type="number" id="cpNuevo" required=""> </td>
+                    <td>
+                        <input type="button" value="Realizar cambio" onclick="changeCP()">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <h2>Ver datos sobre edificios </h2>
+        <div style="">
+            <table>
+                <tr>
+                    <td>¿Para que edificio? </td>
+                    <td>
+                        <input type="number" id="numeroEdificioParaLosPrint" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mostrar calle </td>
+                    <td>
+                        <input type="button" value="Mostrar" onclick="printCalle()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mostrar CP</td>
+                    <td>
+                        <input type="button" value="Mostrar" onclick="printCP()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mostrar Plantas</td>
+                    <td>
+                        <input type="button" value="Mostrar" onclick="printPlantas()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mostrar edificios</td>
+                    <td>
+                        <input type="button" value="Mostrar" onclick="mostrar()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mostrar TODO de los edificios</td>
+                    <td>
+                        <input type="button" value="Mostrar" onclick="mostrarTodo()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div style="    width: 48%;min-height: 101%;margin-top: -1%;padding: 1%;color: #584c4c;float: left;font-size: 30px;background-color: rgb(110, 165, 165);" id="notificaciones"></div>
+</body>
+
+</html>
